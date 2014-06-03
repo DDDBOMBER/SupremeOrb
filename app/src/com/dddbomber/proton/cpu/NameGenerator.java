@@ -15,7 +15,14 @@ public class NameGenerator {
 		"Power",
 		"Egg",
 		"Machine",
-		"Star"
+		"Star",
+		"Gargamel",
+		"Hewie",
+		"Donald",
+		"Frank",
+		"Ocean",
+		"Shine",
+		""
 	};
 	
 	public static String generateName(){

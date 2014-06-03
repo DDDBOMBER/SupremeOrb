@@ -113,7 +113,6 @@ public class Level {
 			e.tick(this, input);
 			if(e.removed){
 				entities.remove(i--);
-				if(e instanceof Player)Colors.unused.add(e.colors);
 			}else{
 				if(e instanceof Enemy || (e instanceof EntitySpawner && ((EntitySpawner)e).entityToSpawn instanceof Enemy))enemies++;
 			}
@@ -128,10 +127,6 @@ public class Level {
 			if(restartDelay-- <= 0){
 				if(input.keyboard.keys[KeyEvent.VK_SPACE]){
 					Menu.menu = new ColorSelectMenu();
-					if(won == 1){
-						Menu.menu = new GainInEloMenu(Game.account.elo+12);
-						Game.account.elo += 12;
-					}
 				}
 			}
 		}
