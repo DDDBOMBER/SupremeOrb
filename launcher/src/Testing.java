@@ -4,7 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.security.DigestInputStream;
+import java.security.MessageDigest;
 import java.util.Scanner;
 
 import javax.imageio.ImageIO;
@@ -21,9 +25,23 @@ import javax.swing.border.EmptyBorder;
 
 
 public class Testing {
+	public static String path = defaultDirectory()+"/SupremeOrb";
+	
+	protected static String defaultDirectory() {
+		String OS = System.getProperty("os.name").toUpperCase();
+		if (OS.contains("WIN"))
+			return System.getenv("APPDATA");
+		else if (OS.contains("MAC"))
+			return System.getProperty("user.home") + "/Library/Application "
+			+ "Support";
+		else if (OS.contains("NUX"))
+			return System.getProperty("user.home");
+		return System.getProperty("user.dir");
+	}
+	
 	public static JButton launchButton;
 	public static void loadFrame(){
-		JFrame frame = new JFrame("Space Storm Launcher");
+		JFrame frame = new JFrame("SupremeOrb Launcher");
 	    frame.setDefaultCloseOperation(3);
 	    frame.setSize(1280, 720);
 	    frame.setLocationRelativeTo(null);
@@ -109,11 +127,23 @@ public class Testing {
 	public static void updateAndStart(){
 		launchButton.setEnabled(false);
 		launchButton.setText("Checking");
+		
 		Thread t = new Thread(new Runnable(){
 			public void run(){
 				getVersion();
+				
+				try{
+					MessageDigest md = MessageDigest.getInstance("MD5");
+					try (InputStream is = new FileInputStream((new File(path+"/game.exe")))) {
+					  DigestInputStream dis = new DigestInputStream(is, md);
+					}
+					byte[] digest = md.digest();
+				}catch (Exception e){
+					
+				}
+				
 				try {
-					Process p = Runtime.getRuntime().exec(System.getProperty("user.home")+"/Space Storm"+"/game.exe");
+					Process p = Runtime.getRuntime().exec(path+"/game.exe");
 					System.exit(0);
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -125,15 +155,15 @@ public class Testing {
 	
 	private static void transfer() {
 		launchButton.setText("Updating");
-		Transfer t = new Transfer("https://dl.dropbox.com/u/63217995/Space%20Sim%20Game.exe", System.getProperty("user.home")+"/Space Storm"+"/game.exe");
+		Transfer t = new Transfer("https://dl.dropbox.com/u/63217995/Space%20Sim%20Game.exe", path+"/game.exe");
 		t.transfer();
-		Transfer t2 = new Transfer("https://dl.dropbox.com/u/63217995/GameVersion.txt", System.getProperty("user.home")+"/Space Storm"+"/game.txt");
+		Transfer t2 = new Transfer("https://dl.dropbox.com/u/63217995/GameVersion.txt", path+"/game.txt");
 		t2.transfer();
 	}
 	private static void getVersion() {
 		String s1 = "";
 		try{
-			File f = new File(System.getProperty("user.home")+"/Space Storm"+"/game.txt");
+			File f = new File(path+"/game.txt");
 			Scanner scanner = new Scanner(f);
 			while (scanner.hasNextLine()) {
 				s1 = scanner.nextLine();
@@ -141,8 +171,8 @@ public class Testing {
 		}catch(Exception e){
 			
 		}
-		File f = new File(System.getProperty("user.home")+"/Space Storm"+"/game.exe");
-		Transfer t = new Transfer("https://dl.dropbox.com/u/63217995/GameVersion.txt", System.getProperty("user.home")+"/Space Storm"+"/gameTemp.txt");
+		File f = new File(path+"/game.exe");
+		Transfer t = new Transfer("https://dl.dropbox.com/u/63217995/GameVersion.txt", path+"/gameTemp.txt");
 		if(t.failed && f.exists()){
 			return;
 		}else if(t.failed){
