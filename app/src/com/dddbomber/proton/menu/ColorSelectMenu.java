@@ -1,5 +1,6 @@
 package com.dddbomber.proton.menu;
 
+import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
@@ -12,7 +13,7 @@ import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;
 import com.dddbomber.proton.rank.Rank;
 
-public class ColorSelectMenu extends Menu {
+public class ColorSelectMenu extends ScreenMenu {
 
 	static Random random = new Random();
 	
@@ -35,7 +36,7 @@ public class ColorSelectMenu extends Menu {
 		}
 	}
 	
-	public void render(Screen screen) {
+	public void render(Graphics g, int width, int height) {
 		screen.fill(0, 0, screen.width, screen.height, 0x2E2128, 20);
 		int x = 48;
 		for(Colors c : Colors.cols()){
@@ -61,6 +62,7 @@ public class ColorSelectMenu extends Menu {
 			msg = "PRESS SPACE TO START";
 			screen.draw(msg, screen.width/2-msg.length()*6, 160, 0xffffff, 2);
 		}
+		super.render(g, width, height);
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.dddbomber.proton.menu;
 
+import java.awt.Graphics;
 import java.util.Random;
 
 import com.dddbomber.proton.assets.Screen;
@@ -7,8 +8,9 @@ import com.dddbomber.proton.entity.Colors;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;
 
-public class GameMenu extends Menu {
+public class GameMenu extends ScreenMenu {
 
+	
 	public GameMenu(Colors colors){
 		level = new Level(colors);
 	}
@@ -21,8 +23,9 @@ public class GameMenu extends Menu {
 
 	public Level level;
 	
-	public void render(Screen screen) {
+	public void render(Graphics g, int width, int height) {
 		level.render(screen);
+		super.render(g, width, height);
 	}
 
 }

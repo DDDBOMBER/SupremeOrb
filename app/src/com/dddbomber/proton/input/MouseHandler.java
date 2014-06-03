@@ -6,6 +6,8 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import com.dddbomber.proton.Game;
+import com.dddbomber.proton.menu.Menu;
+import com.dddbomber.proton.menu.ScreenMenu;
 
 public class MouseHandler implements MouseListener, MouseMotionListener{
 	
@@ -20,16 +22,16 @@ public class MouseHandler implements MouseListener, MouseMotionListener{
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
-        double xScale = ((double)Game.SCREENWIDTH/(double)Game.WIDTH);
-        double yScale = ((double)Game.SCREENHEIGHT/(double)Game.HEIGHT);
+        double xScale = ((double)Menu.SCREENWIDTH/(double)Game.WIDTH);
+        double yScale = ((double)Menu.SCREENHEIGHT/(double)Game.HEIGHT);
 		x = (int) ((e.getX())*xScale);
 		y = (int) ((e.getY())*yScale);
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
-        double xScale = ((double)Game.SCREENWIDTH/(double)Game.WIDTH);
-        double yScale = ((double)Game.SCREENHEIGHT/(double)Game.HEIGHT);
+        double xScale = ((double)Menu.SCREENWIDTH/(double)Game.WIDTH);
+        double yScale = ((double)Menu.SCREENHEIGHT/(double)Game.HEIGHT);
 		x = (int) ((e.getX())*xScale);
 		y = (int) ((e.getY())*yScale);
 	}

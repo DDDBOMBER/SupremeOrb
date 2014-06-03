@@ -30,10 +30,9 @@ public class Game extends Canvas implements Runnable{
 	private static final long serialVersionUID = 1L;
 	//public static int WIDTH = 1138, HEIGHT = 640;
 	public static int WIDTH = 960, HEIGHT = 640;
-	public static int SCREENWIDTH = 480, SCREENHEIGHT = 320;
 	public static final String NAME = "Red Proton";
 	
-	public Screen screen;
+	
 	public InputHandler input;
 	
 	public static Music ts;
@@ -56,8 +55,6 @@ public class Game extends Canvas implements Runnable{
 			e.printStackTrace();
 		}
 		setSize(new Dimension(WIDTH, HEIGHT));
-		screen = new Screen(SCREENWIDTH, SCREENHEIGHT);
-		screen.fill(0, 0, screen.width, screen.height, 0x2A1D24);
 		input = new InputHandler(this);
 	}
 	
@@ -110,11 +107,7 @@ public class Game extends Canvas implements Runnable{
 	private void render() {
 		renders++;
 
-		WIDTH = getWidth();
-		HEIGHT = getHeight();
-		if(SCREENWIDTH != WIDTH/2 || SCREENHEIGHT != HEIGHT/2){
-			screen = new Screen(SCREENWIDTH=WIDTH/2, SCREENHEIGHT=HEIGHT/2);
-		}
+		
 		
 		BufferStrategy bs = this.getBufferStrategy();
 		if(bs == null){
@@ -124,9 +117,7 @@ public class Game extends Canvas implements Runnable{
 		
 		Graphics g = bs.getDrawGraphics();
 		
-		Menu.menu.render(screen);
-		
-		g.drawImage(screen.getImage(), 0, 0, getWidth(), getHeight(), null);
+		Menu.menu.render(g, getWidth(), getHeight());
 
 		g.dispose();
 		bs.show();
