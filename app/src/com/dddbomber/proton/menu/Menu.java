@@ -8,7 +8,7 @@ public abstract class Menu {
 	
 	public static int SCREENWIDTH = 480, SCREENHEIGHT = 320;
 	
-	public static Menu menu = new ColorSelectMenu();
+	public static Menu menu = new DropInEloMenu(1748);
 	
 	public abstract void tick(InputHandler input);
 	

@@ -51,11 +51,11 @@ public class ColorSelectMenu extends ScreenMenu {
 			
 			x+=48;
 		}
-		String msg = "SELECT A COLOR";
+		String msg = "Select A Color";
 		screen.draw(msg, screen.width/2-msg.length()*6, 32, 0xffffff, 2);
 		
 		if(selected != null){
-			msg = "PRESS SPACE TO START";
+			msg = "Press Space To Start";
 			screen.draw(msg, screen.width/2-msg.length()*6, 160, 0xffffff, 2);
 		}
 		super.render(g, width, height);

@@ -43,7 +43,7 @@ public class Level {
 	
 	public void render(Screen screen){
 		if(countdown < 61 && countdown > 0){
-			screen.draw("GO!", screen.width/2-12, 64, 0xffffff, 2);
+			screen.draw("Go", screen.width/2-8, 64, 0xffffff, 2);
 		}else if(countdown >= 60){
 			screen.draw(""+(countdown)/60, screen.width/2-6, 96, 0xffffff, 2);
 		}
@@ -51,11 +51,11 @@ public class Level {
 		if(player.removed || (enemies < 1 && countdown == 0)){
 			if(restartDelay-- <= 0){
 				String msg = "";
-				if(won == 1)msg = "YOU WON";
-				if(won == 2)msg = "YOU LOSE";
-				if(won == 3)msg = "DRAW";
+				if(won == 1)msg = "You Won";
+				if(won == 2)msg = "You Lose";
+				if(won == 3)msg = "You Draw";
 				screen.draw(msg, screen.width/2-msg.length()*6, 64, 0xffffff, 2);
-				screen.draw("PRESS SPACE TO RESTART", screen.width/2-132, 96, 0xffffff, 2);
+				screen.draw("Press Space To Restart]", screen.width/2-132, 96, 0xffffff, 2);
 			}
 		}
 		if(slowDown > 0 && ticks % 2 == 0){
@@ -71,7 +71,7 @@ public class Level {
 		for(Entity e : entities){
 			if(e instanceof Enemy || e instanceof Player){
 				renderOverlayForEntity(screen, offset, e);
-				renderRank(screen, offset, (e == player ? 9 : 0));
+				renderRank(screen, offset, (e == player ? 9 : 8));
 				offset = screen.width-72;
 			}
 		}
