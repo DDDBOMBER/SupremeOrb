@@ -25,7 +25,13 @@ public class GainInEloMenu extends ScreenMenu {
 	public int ticks = 0;
 	
 	public void tick(InputHandler input) {
-		if(displayedELO < newELO)displayedELO++;
+		if(displayedELO < newELO){
+			displayedELO++;
+		}else{
+			if(input.keyboard.keys[KeyEvent.VK_SPACE]){
+				Menu.menu = new ColorSelectMenu();
+			}
+		}
 	}
 	
 	public void render(Graphics g, int width, int height) {
@@ -62,7 +68,8 @@ public class GainInEloMenu extends ScreenMenu {
 		screen.drawTrans(Asset.ranks[5], screen.width-74, screen.height-76, 0, 0, 24, 24, 50);
 		
 		if(displayedELO == newELO){
-			
+			msg = "Press Space To Return";
+			screen.draw(msg, screen.width/2-msg.length()*6, 64, 0xffffff, 2);
 		}
 		super.render(g, width, height);
 	}

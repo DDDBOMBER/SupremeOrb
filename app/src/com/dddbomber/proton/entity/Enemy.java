@@ -1,6 +1,7 @@
 package com.dddbomber.proton.entity;
 
 import com.dddbomber.proton.assets.Screen;
+import com.dddbomber.proton.cpu.NameGenerator;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;
 
@@ -16,7 +17,7 @@ public class Enemy extends NamedEntity {
 		this.y = y;
 		size = 10;
 		colors = Colors.getRandomCol();
-		name = "CPU Bonfire";
+		name = "CPU "+NameGenerator.generateName();
 	}
 	
 	public int dir;

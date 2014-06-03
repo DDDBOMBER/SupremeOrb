@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.dddbomber.proton.Game;
 import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.entity.Colors;
@@ -14,6 +15,7 @@ import com.dddbomber.proton.entity.NamedEntity;
 import com.dddbomber.proton.entity.Player;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.menu.ColorSelectMenu;
+import com.dddbomber.proton.menu.GainInEloMenu;
 import com.dddbomber.proton.menu.Menu;
 
 public class Level {
@@ -126,6 +128,10 @@ public class Level {
 			if(restartDelay-- <= 0){
 				if(input.keyboard.keys[KeyEvent.VK_SPACE]){
 					Menu.menu = new ColorSelectMenu();
+					if(won == 1){
+						Menu.menu = new GainInEloMenu(Game.account.elo+12);
+						Game.account.elo += 12;
+					}
 				}
 			}
 		}
