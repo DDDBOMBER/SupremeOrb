@@ -4,7 +4,8 @@ A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both player
 
 [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot-01.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```javascript
-	// A screenshot from a ranked game, the player on the right has not played enough games to obtain a rank yet.
+	// A screenshot from a ranked game
+	//the player on the right has not played enough games to obtain a rank yet
 ```
 
 #Ranked Matches
