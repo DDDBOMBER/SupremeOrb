@@ -2,7 +2,7 @@ SupremeOrb
 ==========
 A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both players take the role of a ball of light, who can shoot bullets of the same color as themselves. With added visual effects such as particles and flashes, and gameplay mechanics such as when a player gets hit, everything slows down.
 
-[![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot.png)](https://github.com/DDDBOMBER/SupremeOrb)
+[![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot-01.png)](https://github.com/DDDBOMBER/SupremeOrb)
 
 #Ranked Matches
   A queue system for matches which finds you an opponent of a similar skill level. Rankings are based off an ELO system, on who you beat and who beats you. With visual icons for your "skill group" to encourage people to play more and win.
