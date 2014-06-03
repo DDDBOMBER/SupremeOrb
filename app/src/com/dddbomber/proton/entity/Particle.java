@@ -1,9 +1,5 @@
 package com.dddbomber.proton.entity;
 
-import java.awt.Rectangle;
-import java.awt.event.KeyEvent;
-
-import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;

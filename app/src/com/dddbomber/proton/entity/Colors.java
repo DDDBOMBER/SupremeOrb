@@ -1,7 +1,6 @@
 package com.dddbomber.proton.entity;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public enum Colors {

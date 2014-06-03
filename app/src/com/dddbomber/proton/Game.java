@@ -20,7 +20,6 @@ import kuusisto.tinysound.Sound;
 import kuusisto.tinysound.TinySound;
 
 import com.dddbomber.proton.assets.Asset;
-import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.menu.Menu;
 

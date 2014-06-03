@@ -12,7 +12,6 @@ import com.dddbomber.proton.entity.EntitySpawner;
 import com.dddbomber.proton.entity.Player;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.menu.ColorSelectMenu;
-import com.dddbomber.proton.menu.GameMenu;
 import com.dddbomber.proton.menu.Menu;
 
 public class Level {

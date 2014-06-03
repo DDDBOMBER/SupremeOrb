@@ -3,7 +3,6 @@ package com.dddbomber.proton.menu;
 import java.awt.Graphics;
 import java.util.Random;
 
-import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.entity.Colors;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;

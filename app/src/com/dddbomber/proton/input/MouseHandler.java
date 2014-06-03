@@ -7,7 +7,6 @@ import java.awt.event.MouseMotionListener;
 
 import com.dddbomber.proton.Game;
 import com.dddbomber.proton.menu.Menu;
-import com.dddbomber.proton.menu.ScreenMenu;
 
 public class MouseHandler implements MouseListener, MouseMotionListener{
 	

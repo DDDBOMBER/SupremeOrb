@@ -2,14 +2,13 @@ package com.dddbomber.proton.menu;
 
 import java.awt.Graphics;
 
-import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.input.InputHandler;
 
 public abstract class Menu {
 	
 	public static int SCREENWIDTH = 480, SCREENHEIGHT = 320;
 	
-	public static Menu menu = new RankMenu();
+	public static Menu menu = new ColorSelectMenu();
 	
 	public abstract void tick(InputHandler input);
 	

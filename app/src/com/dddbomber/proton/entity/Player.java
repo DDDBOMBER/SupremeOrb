@@ -2,11 +2,6 @@ package com.dddbomber.proton.entity;
 
 import java.awt.event.KeyEvent;
 
-import kuusisto.tinysound.Sound;
-import kuusisto.tinysound.TinySound;
-
-import com.dddbomber.proton.Game;
-import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;

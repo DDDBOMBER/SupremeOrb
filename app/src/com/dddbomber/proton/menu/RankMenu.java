@@ -1,16 +1,10 @@
 package com.dddbomber.proton.menu;
 
 import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.event.KeyEvent;
 import java.util.Random;
 
 import com.dddbomber.proton.assets.Asset;
-import com.dddbomber.proton.assets.Screen;
-import com.dddbomber.proton.entity.Colors;
 import com.dddbomber.proton.input.InputHandler;
-import com.dddbomber.proton.level.Level;
 import com.dddbomber.proton.rank.Rank;
 
 public class RankMenu extends ScreenMenu {

@@ -1,6 +1,5 @@
 package com.dddbomber.proton;
 
-import org.net.Msg.*;
 import org.net.Msg.Msg;
 import org.net.p2p.*;
 

@@ -1,10 +1,7 @@
 package com.dddbomber.proton.entity;
 
 import java.awt.Rectangle;
-import java.awt.event.KeyEvent;
-
 import com.dddbomber.proton.Game;
-import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;
@@ -19,8 +16,8 @@ public class Bullet extends Entity {
 		this.y = y;
 		xSize = 16;
 		ySize = 16;
-		this.xSpeed = Math.sin(Math.toRadians(rotation))*5;
-		this.ySpeed = Math.cos(Math.toRadians(rotation))*5;
+		this.xSpeed = Math.sin(Math.toRadians(rotation))*5.0;
+		this.ySpeed = Math.cos(Math.toRadians(rotation))*5.0;
 		this.colors = colors;
 		col = colors.col;
 		light = colors.light;
