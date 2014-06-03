@@ -61,11 +61,11 @@ public class Launcher {
 	    }
 	    frame.setIconImage(icon);
 	    JLabel barLabel = new JLabel(new ImageIcon(barImg));
-	    barLabel.setSize(1280, 148);
-	    barLabel.setLocation(0, 720-148);
+	    barLabel.setSize(1280, 128);
+	    barLabel.setLocation(0, 720-128);
 	    JLabel titleLabel = new JLabel(new ImageIcon(titleImg));
-	    titleLabel.setSize(1280, 148);
-	    titleLabel.setLocation(0, 720-148);
+	    titleLabel.setSize(1280, 128);
+	    titleLabel.setLocation(0, 720-128);
 
 	    JEditorPane jep = new JEditorPane();
 	    jep.setEditable(false);
@@ -74,7 +74,7 @@ public class Launcher {
 	    jep.setBorder(new EmptyBorder(0, 0, 0, 0));
 	    try
 	    {
-	      jep.setPage("http://spacestormblasdfasdfasdfog.tumasdfsdfasdfablr.comasdfasdfasdf/");
+	      jep.setPage("fail");
 	    }
 	    catch (IOException e)
 	    {
@@ -84,13 +84,13 @@ public class Launcher {
 	    JScrollPane scrollPane = new JScrollPane(jep);
 	    scrollPane.setBackground(Color.BLACK);
 
-	    scrollPane.setSize(frame.getWidth() - 5, 720-140);
+	    scrollPane.setSize(frame.getWidth() - 5, 720-128);
 	    scrollPane.setLocation(0, 0);
 	    scrollPane.setBorder(new EmptyBorder(0, 0, 0, 0));
 	    
 	    launchButton = new JButton("Play");
 	    launchButton.setSize(100, 24);
-	    launchButton.setLocation(24, 710-84);
+	    launchButton.setLocation(24, 720-110);
 	    launchButton.setVisible(true);
 	    launchButton.setEnabled(true);
 	    launchButton.addActionListener(new ActionListener()
@@ -101,7 +101,7 @@ public class Launcher {
 	    });
 	    JButton exitButton = new JButton("Quit");
 	    exitButton.setSize(100, 24);
-	    exitButton.setLocation(24, 710-54);
+	    exitButton.setLocation(24, 720-74);
 	    exitButton.setVisible(true);
 	    exitButton.setEnabled(true);
 	    exitButton.addActionListener(new ActionListener()
