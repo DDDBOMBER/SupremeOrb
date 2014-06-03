@@ -3,11 +3,18 @@ SupremeOrb
 A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both players take the role of a ball of light, who can shoot bullets of the same color as themselves. With added visual effects such as particles and flashes, and gameplay mechanics such as when a player gets hit, everything slows down.
 
 [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot-01.png)](https://github.com/DDDBOMBER/SupremeOrb)
+```javascript
+	// A screenshot from a ranked game, the player on the right has not played enough games to obtain a rank yet.
+```
 
 #Ranked Matches
-  A queue system for matches which finds you an opponent of a similar skill level. Rankings are based off an ELO system, on who you beat and who beats you. With visual icons for your "skill group" to encourage people to play more and win.
+  A queue system for matches which finds you an opponent of a similar skill level. Rankings are based off an ELO system, on who you beat and who beats you. With visual icons for your "skill group" to encourage people to play more and win. After 15 games win/lose you gain a rank.
 
  [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/rank_previews.png)](https://github.com/DDDBOMBER/SupremeOrb)
+```javascript
+	// A screenshot of all the ranks, top left is the lowest, bottom right is the highest
+```
+
   
 #Regular Tournaments, Ladders with Prize Badges
   Regular tournaments with a check-in system allowing you to sign up whenever you want. Regular Ladders with rankings separate from the ELO skill rankings, so anyone can come top of the ladder.Win badges that can be displayed, so whenever you go into a game, your opponents will know what you have achieved in the game.
