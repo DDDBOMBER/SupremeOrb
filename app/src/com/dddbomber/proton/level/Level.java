@@ -71,7 +71,7 @@ public class Level {
 		for(Entity e : entities){
 			if(e instanceof Enemy || e instanceof Player){
 				renderOverlayForEntity(screen, offset, e);
-				renderRank(screen, offset, (e == player ? 10 : 0));
+				renderRank(screen, offset, (e == player ? 9 : 0));
 				offset = screen.width-72;
 			}
 		}
@@ -79,8 +79,8 @@ public class Level {
 
 
 	public void renderRank(Screen screen, int offset, int rank){
-		screen.drawTrans(Asset.rank_overlay, offset+16, screen.height-64, 0, 0, 32, 32, 50);
-		screen.drawTrans(Asset.ranks[rank], offset+20, screen.height-60, 0, 0, 24, 24, 50);
+		screen.drawTrans(Asset.rank_overlay, offset+16, screen.height-64, 0, 0, 32, 32, 25);
+		screen.drawTrans(Asset.ranks[rank], offset+20, screen.height-60, 0, 0, 24, 24, 25);
 	}
 	
 	public void renderOverlayForEntity(Screen screen, int offset, Entity player){
