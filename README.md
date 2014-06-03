@@ -24,6 +24,10 @@ A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both player
 ```
 	A screenshot of someone losing a game and losing ELO
 ```
+ [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_03.png)](https://github.com/DDDBOMBER/SupremeOrb)
+```
+	A screenshot of someone who has not yet got a rank
+```
 
   
 #Regular Tournaments, Ladders with Prize Badges
