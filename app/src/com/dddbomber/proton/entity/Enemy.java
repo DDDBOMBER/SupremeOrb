@@ -4,7 +4,7 @@ import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;
 
-public class Enemy extends Entity {
+public class Enemy extends NamedEntity {
 
 	public boolean walking, left;
 	public int anim, shootDelay;
@@ -16,6 +16,7 @@ public class Enemy extends Entity {
 		this.y = y;
 		size = 10;
 		colors = Colors.getRandomCol();
+		name = "CPU Bonfire";
 	}
 	
 	public int dir;

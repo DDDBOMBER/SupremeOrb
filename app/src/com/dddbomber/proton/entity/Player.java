@@ -2,11 +2,12 @@ package com.dddbomber.proton.entity;
 
 import java.awt.event.KeyEvent;
 
+import com.dddbomber.proton.Game;
 import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;
 
-public class Player extends Entity {
+public class Player extends NamedEntity {
 
 	public boolean walking, left;
 	public int anim, shootDelay;
@@ -18,6 +19,7 @@ public class Player extends Entity {
 		size = 10;
 		this.x = x;
 		this.y = y;
+		name = Game.account.username;
 	}
 	
 	@Override

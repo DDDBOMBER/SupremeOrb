@@ -41,6 +41,7 @@ public class Game extends Canvas implements Runnable{
 	public static Account account = new Account(0, "");
 	
 	public Game(){
+		account.getUserInfo();
 		try {
 			TinySound.init();
 			hit = TinySound.loadSound("/sound/hit.wav");

@@ -10,6 +10,7 @@ import com.dddbomber.proton.entity.Colors;
 import com.dddbomber.proton.entity.Enemy;
 import com.dddbomber.proton.entity.Entity;
 import com.dddbomber.proton.entity.EntitySpawner;
+import com.dddbomber.proton.entity.NamedEntity;
 import com.dddbomber.proton.entity.Player;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.menu.ColorSelectMenu;
@@ -70,25 +71,27 @@ public class Level {
 		int offset = 8;
 		for(Entity e : entities){
 			if(e instanceof Enemy || e instanceof Player){
-				renderOverlayForEntity(screen, offset, e);
+				renderOverlayForEntity(screen, offset, (NamedEntity)e);
 				renderRank(screen, offset, (e == player ? 9 : 8));
-				offset = screen.width-72;
+				offset = screen.width-132;
 			}
 		}
 	}
 
 
 	public void renderRank(Screen screen, int offset, int rank){
-		screen.drawTrans(Asset.rank_overlay, offset+16, screen.height-64, 0, 0, 32, 32, 25);
-		screen.drawTrans(Asset.ranks[rank], offset+20, screen.height-60, 0, 0, 24, 24, 25);
+		screen.drawTrans(Asset.rank_overlay, offset-4, screen.height-36, 0, 0, 32, 32, 50);
+		screen.drawTrans(Asset.ranks[rank], offset, screen.height-32, 0, 0, 24, 24, 50);
 	}
 	
-	public void renderOverlayForEntity(Screen screen, int offset, Entity player){
-		screen.fill(offset, screen.height-32, 64, 24, player.colors.col, 10);
+	public void renderOverlayForEntity(Screen screen, int offset, NamedEntity player){
+		screen.fill(offset+28, screen.height-32, 96, 24, player.colors.col, 10);
 
-		screen.draw(""+player.health, offset, screen.height-31, player.colors.light, 2);
-		screen.fill(offset, screen.height-16, 64, 8, player.colors.col);
-		screen.fill(offset, screen.height-16, player.health*2, 8, player.colors.light);
+		screen.draw(""+player.health, offset+28, screen.height-31, player.colors.light, 2);
+		screen.fill(offset+28, screen.height-16, 96, 8, player.colors.col);
+		screen.fill(offset+28, screen.height-16, player.health*3, 8, player.colors.light);
+		
+		screen.draw(player.name, offset+52, screen.height-31, player.colors.light, 1);
 	}
 	
 	public int slowDown = 0;
