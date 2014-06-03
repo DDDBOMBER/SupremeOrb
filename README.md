@@ -3,17 +3,17 @@ SupremeOrb
 A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both players take the role of a ball of light, who can shoot bullets of the same color as themselves. With added visual effects such as particles and flashes, and gameplay mechanics such as when a player gets hit, everything slows down.
 
 [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot-01.png)](https://github.com/DDDBOMBER/SupremeOrb)
-```javascript
-	// A screenshot from a ranked game
-	//the player on the right has not played enough games to obtain a rank yet
+```
+	A screenshot from a ranked game
+	The player on the right has not played enough games to obtain a rank yet
 ```
 
 #Ranked Matches
   A queue system for matches which finds you an opponent of a similar skill level. Rankings are based off an ELO system, on who you beat and who beats you. With visual icons for your "skill group" to encourage people to play more and win. After 15 games win/lose you gain a rank.
 
  [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/rank_previews.png)](https://github.com/DDDBOMBER/SupremeOrb)
-```javascript
-	// A screenshot of all the ranks, top left is the lowest, bottom right is the highest
+```
+	A screenshot of all the ranks, top left is the lowest, bottom right is the highest
 ```
 
   
@@ -22,9 +22,22 @@ A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both player
 
 #Profiles
   Make an account to track your ELO ranking, wins, losses and other statistics. Display your badges and add friends.
+```
+	Track playtime, accuracy, wins, losses, friends and more
+```
   
 #Lobby
   Create a lobby and invite any online players or your friends. Host your own tournaments with players, or play freindly games that have no effect on your ranking.
+```
+	A friends list, with messaging and invite capabilities
+```
+
+# Free-2-Play with Premium Accounts
+	The game will be free to play, but with advertisements in menus and in between games. However, premium accounts will be available to support the hosting of the game, which will remove advertisements but will not provide any advantage to the player in game.
+```
+	For £1.99 a month you gain a premium account
+	Which allows you access to premium tournaments, new character colors and a badge
+```
 
 #License
   Owned By Dylan Dhokia
