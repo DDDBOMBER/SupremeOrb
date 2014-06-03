@@ -24,7 +24,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 
 
-public class Testing {
+public class Launcher {
 	public static String path = defaultDirectory()+"/SupremeOrb";
 	
 	protected static String defaultDirectory() {
@@ -53,19 +53,19 @@ public class Testing {
 	    BufferedImage titleImg = null;
 	    Image icon = null;
 	    try {
-	    	icon = ImageIO.read(Testing.class.getResource("/icon.png"));
-	    	barImg = ImageIO.read(Testing.class.getResource("/back.png"));
-	    	titleImg = ImageIO.read(Testing.class.getResource("/overlay.png"));
+	    	icon = ImageIO.read(Launcher.class.getResource("/icon.png"));
+	    	barImg = ImageIO.read(Launcher.class.getResource("/back.png"));
+	    	titleImg = ImageIO.read(Launcher.class.getResource("/overlay.png"));
 	    } catch (IOException e) {
 	    	e.printStackTrace();
 	    }
 	    frame.setIconImage(icon);
 	    JLabel barLabel = new JLabel(new ImageIcon(barImg));
-	    barLabel.setSize(1280, 128);
-	    barLabel.setLocation(0, 720-128);
+	    barLabel.setSize(1280, 148);
+	    barLabel.setLocation(0, 720-148);
 	    JLabel titleLabel = new JLabel(new ImageIcon(titleImg));
-	    titleLabel.setSize(1280, 128);
-	    titleLabel.setLocation(0, 720-128);
+	    titleLabel.setSize(1280, 148);
+	    titleLabel.setLocation(0, 720-148);
 
 	    JEditorPane jep = new JEditorPane();
 	    jep.setEditable(false);
@@ -74,7 +74,7 @@ public class Testing {
 	    jep.setBorder(new EmptyBorder(0, 0, 0, 0));
 	    try
 	    {
-	      jep.setPage("http://spacestormblog.tumblr.com/");
+	      jep.setPage("http://spacestormblasdfasdfasdfog.tumasdfsdfasdfablr.comasdfasdfasdf/");
 	    }
 	    catch (IOException e)
 	    {
@@ -84,13 +84,13 @@ public class Testing {
 	    JScrollPane scrollPane = new JScrollPane(jep);
 	    scrollPane.setBackground(Color.BLACK);
 
-	    scrollPane.setSize(frame.getWidth() - 5, 720-128);
+	    scrollPane.setSize(frame.getWidth() - 5, 720-140);
 	    scrollPane.setLocation(0, 0);
 	    scrollPane.setBorder(new EmptyBorder(0, 0, 0, 0));
 	    
 	    launchButton = new JButton("Play");
-	    launchButton.setSize(100, 32);
-	    launchButton.setLocation(1148, 720-118);
+	    launchButton.setSize(100, 24);
+	    launchButton.setLocation(24, 710-84);
 	    launchButton.setVisible(true);
 	    launchButton.setEnabled(true);
 	    launchButton.addActionListener(new ActionListener()
@@ -100,8 +100,8 @@ public class Testing {
 	      }
 	    });
 	    JButton exitButton = new JButton("Quit");
-	    exitButton.setSize(100, 32);
-	    exitButton.setLocation(1148, 720-74);
+	    exitButton.setSize(100, 24);
+	    exitButton.setLocation(24, 710-54);
 	    exitButton.setVisible(true);
 	    exitButton.setEnabled(true);
 	    exitButton.addActionListener(new ActionListener()
