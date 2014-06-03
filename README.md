@@ -32,7 +32,7 @@ A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both player
 	A friends list, with messaging and invite capabilities
 ```
 
-# Free-2-Play with Premium Accounts
+# Free to Play with Premium Accounts
 	The game will be free to play, but with advertisements in menus and in between games. However, premium accounts will be available to support the hosting of the game, which will remove advertisements but will not provide any advantage to the player in game.
 ```
 	For £1.99 a month you gain a premium account
