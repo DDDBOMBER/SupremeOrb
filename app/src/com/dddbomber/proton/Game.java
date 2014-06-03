@@ -19,6 +19,7 @@ import kuusisto.tinysound.Music;
 import kuusisto.tinysound.Sound;
 import kuusisto.tinysound.TinySound;
 
+import com.dddbomber.proton.account.Account;
 import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.menu.Menu;
@@ -36,6 +37,8 @@ public class Game extends Canvas implements Runnable{
 	
 	public static Music ts;
 	public static Sound hit;
+	
+	public static Account account = new Account(0, "");
 	
 	public Game(){
 		try {
