@@ -15,8 +15,14 @@ public class StandardConnection {
 	public Connection c;
 	
 	public PacketManager packetManager = new PacketManager();
+
+	public final String ip;
+	public final int port;
 	
 	public StandardConnection(String ip, int port){
+		this.ip = ip;
+		this.port = port;
+		
 		if(openConnection == null)openConnection = this;
 		else System.exit(1); // Connection Already Open
 		
@@ -31,8 +37,6 @@ public class StandardConnection {
 	public void packetRecieved(Connection c, Msg m){
 		Packet p = new Packet(m.getContent());
 		packetManager.registerRecievedPacket(p);
-		
-		System.out.println(m.getContent());
 	}
 	
 	public void sendMsg(Connection c, String body){

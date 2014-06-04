@@ -2,6 +2,7 @@ package com.dddbomber.proton;
 
 import java.awt.BorderLayout;
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -22,6 +23,7 @@ import kuusisto.tinysound.TinySound;
 import com.dddbomber.proton.account.Account;
 import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.cpu.NameGenerator;
+import com.dddbomber.proton.debugger.Debugger;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.menu.Menu;
 import com.dddbomber.proton.mp.GameConnection;
@@ -124,7 +126,15 @@ public class Game extends Canvas implements Runnable{
 		Graphics g = bs.getDrawGraphics();
 		
 		Menu.menu.render(g, getWidth(), getHeight());
-
+		
+		if(Debugger.debuggerEnabled){
+			g.setColor(Color.GREEN);
+			g.drawString(Debugger.debug1, 2, 10);
+			g.drawString(Debugger.debug2, 2, 22);
+			g.drawString(Debugger.debug3, 2, 34);
+			g.drawString(Debugger.debug4, 2, 46);
+		}
+		
 		g.dispose();
 		bs.show();
 	}
@@ -137,14 +147,14 @@ public class Game extends Canvas implements Runnable{
 
 	private void tick() {
 		ticks++;
-		if(!input.focus.has)return;
 		Menu.menu.tick(input);
 		if(input.keyboard.keys[KeyEvent.VK_ESCAPE]){
 			System.exit(0);
 		}
 		sc.sendMsg(sc.c, NameGenerator.generateName());
-		System.out.println("GLOBAL - Packets Recieved - "+sc.packetManager.getPacketsRecieved() +" , Packets Sent - "+sc.packetManager.getPacketsSent());
-		System.out.println("STORAGE - Packets Recieved - "+sc.packetManager.recievedPackets.size() +" , Packets Sent - "+sc.packetManager.sentPackets.size());
+		Debugger.debug1 = "GLOBAL - Packets Recieved - "+sc.packetManager.getPacketsRecieved() +" , Packets Sent - "+sc.packetManager.getPacketsSent();
+		Debugger.debug2 = "STORAGE - Packets Recieved - "+sc.packetManager.recievedPackets.size() +" , Packets Sent - "+sc.packetManager.sentPackets.size();
+		if(sc != null)Debugger.debug3 = "Connection Open on port '"+sc.port+"', to address '"+sc.ip+"'";
 	}
 
 	public static Image icon;
