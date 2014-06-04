@@ -32,10 +32,10 @@ A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both player
 
   
 #Regular Tournaments, Ladders with Prize Badges
-  Regular tournaments with a check-in system allowing you to sign up whenever you want. Regular Ladders with rankings separate from the ELO skill rankings, so anyone can come top of the ladder.Win badges that can be displayed, so whenever you go into a game, your opponents will know what you have achieved in the game.
+  Regular tournaments with a check-in system allowing you to sign up whenever you want. Regular Ladders with rankings separate from the ELO skill rankings, so anyone can come top of the ladder. Win badges that can be displayed, so whenever you go into a game, your opponents will know what you have achieved in the game. The tournaments additionally add to rankings, meaning every game you play brings the game closer to accurately measuring your skill level.
 
 #Profiles
-  Make an account to track your ELO ranking, wins, losses and other statistics. Display your badges and add friends.
+  Accounts are mandatory to play online, without one you can only play against the computer. Make an account to track your ELO ranking, wins, losses and other statistics. Display your badges and add friends, to compete in public or private tournaments.
 ```
 	Track playtime, accuracy, wins, losses, friends and more
 ```

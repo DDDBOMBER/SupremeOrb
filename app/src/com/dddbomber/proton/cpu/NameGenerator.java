@@ -8,8 +8,8 @@ public class NameGenerator {
 	
 	public static String[] names = {
 		"Bonfire",
-		"Lights",
-		"3005",
+		"Storm",
+		"Wolf",
 		"Angel",
 		"Captain",
 		"Power",
@@ -21,8 +21,7 @@ public class NameGenerator {
 		"Donald",
 		"Frank",
 		"Ocean",
-		"Shine",
-		""
+		"Shine"
 	};
 	
 	public static String generateName(){
