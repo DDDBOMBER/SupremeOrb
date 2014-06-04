@@ -39,10 +39,10 @@ public class NeedMoreWinsMenu extends ScreenMenu {
 			screen.renderLight(screen.width/2-150+i, 256, 4, 0xffffff);
 		}
 
-		msg = "You Have Played "+gamesPlayed+" of "+gamesNeeded+" Games";
+		msg = "You Have Played "+gamesPlayed+" of 15 Games";
 		screen.draw(msg, screen.width/2-msg.length()*6, 224, 0xffffff, 2);
 		
-		msg = "Needed To Obtain A Rank";
+		msg = gamesNeeded+" Needed To Obtain A Rank";
 		screen.draw(msg, screen.width/2-msg.length()*6, 272, 0xffffff, 2);
 		
 		super.render(g, width, height);
