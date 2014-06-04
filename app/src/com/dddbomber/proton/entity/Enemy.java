@@ -18,14 +18,14 @@ public class Enemy extends NamedEntity {
 		size = 10;
 		colors = Colors.getRandomCol();
 		name = "CPU "+NameGenerator.generateName();
+		col = colors.col;
+		light = colors.light;
 	}
 	
 	public int dir;
 	
 	@Override
 	public void tick(Level level, InputHandler input) {
-		col = colors.col;
-		light = colors.light;
 		
 		if(random.nextInt(50) == 0)dir = random.nextInt(4);
 		

@@ -20,12 +20,12 @@ public class Player extends NamedEntity {
 		this.x = x;
 		this.y = y;
 		name = Game.account.username;
+		col = colors.col;
+		light = colors.light;
 	}
 	
 	@Override
 	public void tick(Level level, InputHandler input) {
-		col = colors.col;
-		light = colors.light;
 		
 		if(input.keyboard.keys[KeyEvent.VK_W])ySpeed-=0.5;
 		else if(input.keyboard.keys[KeyEvent.VK_S])ySpeed+=0.5;

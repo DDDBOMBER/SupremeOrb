@@ -27,6 +27,7 @@ public class Level {
 	Random random = new Random();
 	
 	public Player player;
+	public Enemy enemy;
 	
 	public int won;//1 - win // 2 - lose // 3 - draw
 	
@@ -37,7 +38,7 @@ public class Level {
 	public Level(Colors color){
 		player = new Player(color, 80, 160);
 		entities.add(new EntitySpawner(player));
-		entities.add(new EntitySpawner(new Enemy(400, 160)));
+		entities.add(new EntitySpawner(enemy=new Enemy(400, 160)));
 		slowDown = 30;
 	}
 	
@@ -64,7 +65,9 @@ public class Level {
 		if(slowDown > 0 && ticks % 2 == 0){
 			//Skip a tick
 		}else{
-			screen.fill(0, 0, screen.width, screen.height, 0x2E2128, 20);
+			screen.fill(0, 0, screen.width, screen.height, 0x2E2128, 16);
+			screen.fill(0, 0, screen.width, screen.height, player.col, 8);
+			screen.fill(0, 0, screen.width, screen.height, enemy.col, 8);
 			for(Entity e : entities){
 				e.render(this, screen, xScroll, yScroll);
 			}
