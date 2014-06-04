@@ -55,9 +55,10 @@ public class ColorSelectMenu extends ScreenMenu {
 			screen.fill(x-24, 104+y, 48, 1, c.col, 10);
 			screen.fill(x-24, 104+47+y, 48, 1, c.col, 10);
 			screen.fill(x+23, 104+y, 1, 48, c.col, 10);
-			screen.renderFaint(x, 128+y, 32+(int)(Math.random()*5), c.col);
-			screen.renderLight(x, 128+y, 8+(int)(Math.random()*5), c.col);
-			screen.renderLight(x, 128+y, 8+(int)(Math.random()*5), c.light);
+			int growth = (int)(Math.random()*5);
+			screen.renderFaint(x, 128+y, 32+growth, c.col);
+			screen.renderLight(x, 128+y, 8+growth, c.col);
+			screen.renderLight(x, 128+y, 8+growth, c.light);
 			
 			if(c == selected || c == hovered){
 

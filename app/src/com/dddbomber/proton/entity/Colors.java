@@ -14,10 +14,19 @@ public enum Colors {
 
 	orange(0xFB7C5B, 0xFDCDC1),
 	lime(0xC7D93D, 0xE9F2A0),
-	gray(0x3D3D3D, 0x606060),
-	
 	purple(0x4B374C, 0xB29ABB),
-	crocodile(0x287256, 0xCEFF9E);
+	
+	gray(0x3D3D3D, 0x606060),
+	crocodile(0x287256, 0xCEFF9E),
+	ocean(0x7A374E, 0xD27D2C),
+	
+	ghost(0x341B8E,0x685E8E),
+	clay(0x504C40, 0x8C4A3D),
+	sand(0x54403D, 0xD9BD79),
+	
+	magnetic(0x2C729E, 0x8C2E2E),
+	earth(0x712F14, 0xBCD074),
+	vile(0x685E8E, 0xA4616D);
 	
 	public int col, light;
 	
@@ -53,6 +62,13 @@ public enum Colors {
 		list.add(purple);
 		list.add(gray);
 		list.add(crocodile);
+		list.add(ocean);
+		list.add(ghost);
+		list.add(clay);
+		list.add(sand);
+		list.add(magnetic);
+		list.add(earth);
+		list.add(vile);
 		cols = list;
 		return cols;
 	}
