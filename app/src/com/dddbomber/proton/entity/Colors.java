@@ -14,7 +14,10 @@ public enum Colors {
 
 	orange(0xFB7C5B, 0xFDCDC1),
 	lime(0xC7D93D, 0xE9F2A0),
-	purple(0x4B374C, 0xB29ABB);
+	gray(0x3D3D3D, 0x606060),
+	
+	purple(0x4B374C, 0xB29ABB),
+	crocodile(0x287256, 0xCEFF9E);
 	
 	public int col, light;
 	
@@ -34,7 +37,10 @@ public enum Colors {
 	
 	public static ArrayList<Colors> unused = cols();
 	
+	public static ArrayList<Colors> cols;
+	
 	public static ArrayList<Colors> cols(){
+		if(cols != null)return cols;
 		ArrayList<Colors> list = new ArrayList<Colors>();
 		list.add(red);
 		list.add(green);
@@ -45,6 +51,9 @@ public enum Colors {
 		list.add(orange);
 		list.add(lime);
 		list.add(purple);
-		return list;
+		list.add(gray);
+		list.add(crocodile);
+		cols = list;
+		return cols;
 	}
 }
