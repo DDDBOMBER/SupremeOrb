@@ -140,5 +140,6 @@ public class Level {
 				}
 			}
 		}
+		Game.sc.sendMsg(Game.sc.c, player.x+","+player.y);
 	}
 }

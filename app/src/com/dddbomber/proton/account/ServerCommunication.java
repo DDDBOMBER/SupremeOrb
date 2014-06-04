@@ -7,7 +7,10 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class ServerCommunication {
-	public String[] requestPage(String url, String body) throws Exception{
+	
+	public static long lastAuthentication = 0;
+	
+	public static String[] requestPage(String url, String body) throws Exception{
 		URL req = new URL(url);
 		HttpURLConnection connection = (HttpURLConnection) req.openConnection();
 		connection.addRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");

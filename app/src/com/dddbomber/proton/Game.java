@@ -21,6 +21,7 @@ import kuusisto.tinysound.Sound;
 import kuusisto.tinysound.TinySound;
 
 import com.dddbomber.proton.account.Account;
+import com.dddbomber.proton.account.ServerCommunication;
 import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.cpu.NameGenerator;
 import com.dddbomber.proton.debugger.Debugger;
@@ -151,11 +152,10 @@ public class Game extends Canvas implements Runnable{
 		if(input.keyboard.keys[KeyEvent.VK_ESCAPE]){
 			System.exit(0);
 		}
-		sc.sendMsg(sc.c, NameGenerator.generateName());
 		Debugger.debug1 = "GLOBAL - Packets Recieved - "+sc.packetManager.getPacketsRecieved() +" , Packets Sent - "+sc.packetManager.getPacketsSent();
 		Debugger.debug2 = "STORAGE - Packets Recieved - "+sc.packetManager.recievedPackets.size() +" , Packets Sent - "+sc.packetManager.sentPackets.size();
 		if(sc != null)Debugger.debug3 = "P2P - Connection Open on port '"+sc.port+"', to address '"+sc.ip+"'";
-		Debugger.debug4 = "ACCOUNT - "+account.username +"("+account.userID+") - Login Key "+account.private_key+" - ELO "+account.elo;
+		Debugger.debug4 = "ACCOUNT - "+account.username +"("+account.userID+") - ELO "+account.elo + " - "+(ServerCommunication.lastAuthentication == 0 ? "NEVER AUTHORIZED" : "Authorized "+(System.currentTimeMillis()-ServerCommunication.lastAuthentication)+"ms ago");
 		Debugger.debug5 = "SERVER - ";
 	}
 
