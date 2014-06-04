@@ -49,7 +49,6 @@ public enum Colors {
 	public static ArrayList<Colors> cols;
 	
 	public static ArrayList<Colors> cols(){
-		if(cols != null)return cols;
 		ArrayList<Colors> list = new ArrayList<Colors>();
 		list.add(red);
 		list.add(green);
@@ -69,7 +68,12 @@ public enum Colors {
 		list.add(magnetic);
 		list.add(earth);
 		list.add(vile);
-		cols = list;
-		return cols;
+
+		if(cols == null){
+			cols = new ArrayList<Colors>();
+			cols.addAll(list);
+		}
+		
+		return list;
 	}
 }
