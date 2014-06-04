@@ -45,6 +45,8 @@ public class Level {
 	public int xScroll, yScroll;
 	public int ticks = 0;
 	
+	public int back = -1;
+	
 	public void render(Screen screen){
 		if(countdown < 61 && countdown > 0){
 			screen.draw("Go", screen.width/2-8, 64, 0xffffff, 2);
@@ -66,8 +68,8 @@ public class Level {
 			//Skip a tick
 		}else{
 			screen.fill(0, 0, screen.width, screen.height, 0x2E2128, 16);
-			screen.fill(0, 0, screen.width, screen.height, player.col, 8);
-			screen.fill(0, 0, screen.width, screen.height, enemy.col, 8);
+			screen.fill(0, 0, screen.width, screen.height, player.col, 2);
+			screen.fill(0, 0, screen.width, screen.height, enemy.col, 2);
 			for(Entity e : entities){
 				e.render(this, screen, xScroll, yScroll);
 			}

@@ -545,6 +545,18 @@ public class Bitmap {
         int tg = (g * amount + g2 * a) / 100;
         int tb = (b * amount + b2 * a) / 100;
 
+        //int dr = (tr-r)*(tr-r);
+        //int dg = (tg-g)*(tg-g);
+        //int db = (tb-b)*(tb-b);
+
+        //if(dr > 64)tr = r;
+        //if(dg > 64)tg = g;
+        //if(db > 64)tb = b;
+
+        //if(r-tr > -7 && r-tr < 7)tr = r;
+        //if(g-tg > -7 && g-tg < 7)tg = g;
+        //if(b-tb > -7 && b-tb < 7)tb = b;
+
         return tr << 16 | tg << 8 | tb;
     }
 
