@@ -2,6 +2,8 @@ package com.dddbomber.proton.mp.packet;
 
 import java.util.ArrayList;
 
+import com.dddbomber.proton.menu.*;
+
 public class PacketManager {
 	public ArrayList<Packet> sentPackets = new ArrayList<Packet>();
 	public ArrayList<Packet> recievedPackets = new ArrayList<Packet>();
@@ -26,6 +28,13 @@ public class PacketManager {
 			}
 		}
 		setPacketsRecieved(getPacketsRecieved() + 1);
+		
+		String data = p.getBody();
+		double x = Double.parseDouble(data.split(",")[0]);
+		double y = Double.parseDouble(data.split(",")[1]);
+
+		((GameMenu)Menu.menu).level.enemy.x = x;
+		((GameMenu)Menu.menu).level.enemy.y = y;
 	}
 
 	public int getPacketsRecieved() {
