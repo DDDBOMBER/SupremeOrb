@@ -18,10 +18,17 @@ public class ColorSelectMenu extends ScreenMenu {
 	
 	public void tick(InputHandler input) {
 		int x = 48;
+		int id = 0;
+		int y = 0;
 		hovered = null;
 		for(Colors c : Colors.cols()){
-			
-			Rectangle cr = new Rectangle(x-24, 104, 48, 48);
+			id++;
+			if(id > 9){
+				y += 48;
+				id = 0;
+				x = 48;
+			}
+			Rectangle cr = new Rectangle(x-24, 104+y, 48, 48);
 			Point p = new Point(input.mouse.x, input.mouse.y);
 			if(cr.contains(p))hovered = c;
 			x += 48;
@@ -34,19 +41,27 @@ public class ColorSelectMenu extends ScreenMenu {
 	
 	public void render(Graphics g, int width, int height) {
 		screen.fill(0, 0, screen.width, screen.height, 0x2E2128, 20);
+		int id = 0;
+		int y = 0;
 		int x = 48;
 		for(Colors c : Colors.cols()){
-			screen.fill(x-24, 104, 1, 48, c.col, 10);
-			screen.fill(x-24, 104, 48, 1, c.col, 10);
-			screen.fill(x-24, 104+47, 48, 1, c.col, 10);
-			screen.fill(x+23, 104, 1, 48, c.col, 10);
-			screen.renderFaint(x, 128, 32+(int)(Math.random()*5), c.col);
-			screen.renderLight(x, 128, 8+(int)(Math.random()*5), c.col);
-			screen.renderLight(x, 128, 8+(int)(Math.random()*5), c.light);
+			id++;
+			if(id > 9){
+				y += 48;
+				id = 0;
+				x = 48;
+			}
+			screen.fill(x-24, 104+y, 1, 48, c.col, 10);
+			screen.fill(x-24, 104+y, 48, 1, c.col, 10);
+			screen.fill(x-24, 104+47+y, 48, 1, c.col, 10);
+			screen.fill(x+23, 104+y, 1, 48, c.col, 10);
+			screen.renderFaint(x, 128+y, 32+(int)(Math.random()*5), c.col);
+			screen.renderLight(x, 128+y, 8+(int)(Math.random()*5), c.col);
+			screen.renderLight(x, 128+y, 8+(int)(Math.random()*5), c.light);
 			
 			if(c == selected || c == hovered){
 
-				screen.fill(x-24, 104, 48, 48, c.light, 25);
+				screen.fill(x-24, 104+y, 48, 48, c.light, 25);
 			}
 			
 			x+=48;
