@@ -11,7 +11,9 @@ public class PacketManager {
 	public void registerSentPacket(Packet p){
 		sentPackets.add(p);
 		if(sentPackets.size() > 1000){
-			sentPackets.subList(500, 999);
+			while(sentPackets.size() > 500){
+				sentPackets.remove(0);
+			}
 		}
 		setPacketsSent(getPacketsSent() + 1);
 	}
@@ -19,7 +21,9 @@ public class PacketManager {
 	public void registerRecievedPacket(Packet p){
 		recievedPackets.add(p);
 		if(recievedPackets.size() > 1000){
-			recievedPackets.subList(500, 999);
+			while(recievedPackets.size() > 500){
+				recievedPackets.remove(0);
+			}
 		}
 		setPacketsRecieved(getPacketsRecieved() + 1);
 	}
