@@ -108,7 +108,7 @@ public class Level {
 	
 	public int slowDown = 0;
 	
-	private int restartDelay = 120;
+	protected int restartDelay = 120;
 	
 	public void tick(InputHandler input){
 		if(countdown > 0)countdown--;

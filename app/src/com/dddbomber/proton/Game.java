@@ -23,6 +23,7 @@ import com.dddbomber.proton.account.Account;
 import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.menu.Menu;
+import com.dddbomber.proton.mp.GameConnection;
 
 public class Game extends Canvas implements Runnable{
 	public static int tickRate = 64;
@@ -137,7 +138,8 @@ public class Game extends Canvas implements Runnable{
 		if(input.keyboard.keys[KeyEvent.VK_ESCAPE]){
 			System.exit(0);
 		}
-		//gpc.poll();
+		
+		GameConnection.getConnection().sendMsg(GameConnection.getConnection().c);
 	}
 
 	public static Image icon;
