@@ -54,6 +54,7 @@ public class Player extends NamedEntity {
 			x -= Math.sin(rot)*1;
 			y += Math.cos(rot)*1;
 			level.shotsFired++;
+			//if(Game.sc.packetManager.getPacketsRecieved() <= Game.sc.packetManager.getPacketsSent())Game.sc.sendMsg(Game.sc.c, "[b]"+x+","+y+","+Math.toDegrees(Math.atan2(input.mouse.y-y, input.mouse.x-x))+90);
 		}
 
 		

@@ -140,6 +140,6 @@ public class Level {
 				}
 			}
 		}
-		if(Game.sc.packetManager.getPacketsRecieved() <= Game.sc.packetManager.getPacketsSent())Game.sc.sendMsg(Game.sc.c, player.x+","+player.y);
+		//if(Game.sc.packetManager.getPacketsRecieved() <= Game.sc.packetManager.getPacketsSent())Game.sc.sendMsg(Game.sc.c, player.x+","+player.y);
 	}
 }
