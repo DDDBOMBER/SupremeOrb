@@ -7,4 +7,5 @@ public class Debugger {
 	public static String debug2 = "";
 	public static String debug3 = "";
 	public static String debug4 = "";
+	public static String debug5 = "";
 }

@@ -43,7 +43,7 @@ public class Game extends Canvas implements Runnable{
 	public static Music ts;
 	public static Sound hit;
 	
-	public static Account account = new Account(0, "");
+	public static Account account = new Account(17, "65U7T5K0Q");
 	
 	public Game(){
 		account.getUserInfo();
@@ -154,7 +154,9 @@ public class Game extends Canvas implements Runnable{
 		sc.sendMsg(sc.c, NameGenerator.generateName());
 		Debugger.debug1 = "GLOBAL - Packets Recieved - "+sc.packetManager.getPacketsRecieved() +" , Packets Sent - "+sc.packetManager.getPacketsSent();
 		Debugger.debug2 = "STORAGE - Packets Recieved - "+sc.packetManager.recievedPackets.size() +" , Packets Sent - "+sc.packetManager.sentPackets.size();
-		if(sc != null)Debugger.debug3 = "Connection Open on port '"+sc.port+"', to address '"+sc.ip+"'";
+		if(sc != null)Debugger.debug3 = "P2P - Connection Open on port '"+sc.port+"', to address '"+sc.ip+"'";
+		Debugger.debug4 = "ACCOUNT - "+account.username +"("+account.userID+") - Login Key "+account.private_key+" - ELO "+account.elo;
+		Debugger.debug5 = "SERVER - ";
 	}
 
 	public static Image icon;
