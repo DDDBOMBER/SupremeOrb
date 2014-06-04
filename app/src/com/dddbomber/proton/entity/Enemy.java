@@ -73,7 +73,6 @@ public class Enemy extends NamedEntity {
 
 	public void render(Level level, Screen screen, int xScroll, int yScroll) {
 		if(hurtTime > 0){
-			screen.renderLight((int)x-xScroll, (int)y-yScroll, size+shootDelay/2, hurtColor.col);
 			screen.renderLight((int)x-xScroll, (int)y-yScroll, size+shootDelay/2, hurtColor.light);
 		}
 		screen.renderFaint((int)x-xScroll, (int)y-yScroll, size*4, col);

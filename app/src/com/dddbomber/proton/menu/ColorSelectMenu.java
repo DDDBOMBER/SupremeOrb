@@ -72,7 +72,7 @@ public class ColorSelectMenu extends ScreenMenu {
 		
 		if(selected != null){
 			msg = "Press Space To Start";
-			screen.draw(msg, screen.width/2-msg.length()*6, 160, 0xffffff, 2);
+			screen.draw(msg, screen.width/2-msg.length()*6, 260, 0xffffff, 2);
 		}
 		super.render(g, width, height);
 	}

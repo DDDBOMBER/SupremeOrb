@@ -69,9 +69,9 @@ public class Level {
 		}else{
 			if(back == -1){
 				int o1 = 0x2E2128;
-				int o2 = screen.merge(o1, player.col, 75);
-				int o3 = screen.merge(o2, enemy.col, 75);
-				int o4 = screen.merge(o2, 0, 75);
+				int o2 = screen.merge(o1, player.col, 80);
+				int o3 = screen.merge(o2, enemy.col, 80);
+				int o4 = screen.merge(o2, 0, 85);
 				back = o4;
 			}
 			screen.fill(0, 0, screen.width, screen.height, back, 20);
