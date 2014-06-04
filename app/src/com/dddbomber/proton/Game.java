@@ -21,9 +21,11 @@ import kuusisto.tinysound.TinySound;
 
 import com.dddbomber.proton.account.Account;
 import com.dddbomber.proton.assets.Asset;
+import com.dddbomber.proton.cpu.NameGenerator;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.menu.Menu;
 import com.dddbomber.proton.mp.GameConnection;
+import com.dddbomber.proton.mp.StandardConnection;
 
 public class Game extends Canvas implements Runnable{
 	public static int tickRate = 64;
@@ -130,6 +132,8 @@ public class Game extends Canvas implements Runnable{
 	public boolean pressed = false;
 	
 	Random random = new Random();
+	
+	public static StandardConnection sc = new StandardConnection("localhost", 12000);
 
 	private void tick() {
 		ticks++;
@@ -138,8 +142,9 @@ public class Game extends Canvas implements Runnable{
 		if(input.keyboard.keys[KeyEvent.VK_ESCAPE]){
 			System.exit(0);
 		}
-		
-		GameConnection.getConnection().sendMsg(GameConnection.getConnection().c);
+		sc.sendMsg(sc.c, NameGenerator.generateName());
+		System.out.println("GLOBAL - Packets Recieved - "+sc.packetManager.getPacketsRecieved() +" , Packets Sent - "+sc.packetManager.getPacketsSent());
+		System.out.println("STORAGE - Packets Recieved - "+sc.packetManager.recievedPackets.size() +" , Packets Sent - "+sc.packetManager.sentPackets.size());
 	}
 
 	public static Image icon;
