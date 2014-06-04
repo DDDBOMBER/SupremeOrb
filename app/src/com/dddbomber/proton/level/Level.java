@@ -61,7 +61,7 @@ public class Level {
 				if(won == 2)msg = "You Lose";
 				if(won == 3)msg = "You Draw";
 				screen.draw(msg, screen.width/2-msg.length()*6, 64, 0xffffff, 2);
-				screen.draw("Press Space To Restart]", screen.width/2-132, 96, 0xffffff, 2);
+				screen.draw("Press Space To Restart", screen.width/2-132, 96, 0xffffff, 2);
 			}
 		}
 		if(slowDown > 0 && ticks % 2 == 0){

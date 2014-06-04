@@ -78,7 +78,6 @@ public class Enemy extends NamedEntity {
 		screen.renderFaint((int)x-xScroll, (int)y-yScroll, size*4, col);
 		screen.renderLight((int)x-xScroll, (int)y-yScroll, size+shootDelay/2, col);
 		screen.renderLight((int)x-xScroll, (int)y-yScroll, size+shootDelay/2, light);
-
 		if(x < size){
 			x = size;
 			xSpeed = -xSpeed;
@@ -99,12 +98,6 @@ public class Enemy extends NamedEntity {
 			ySpeed = -ySpeed;
 			dir = 0;
 		}
-		
-		/*for(int i = 0; i < electrons; i++){
-			screen.renderLight((int)(x+12+Math.sin(Math.toRadians(rotation+i*deg))*(el)), (int)(y+12+Math.cos(Math.toRadians(rotation+i*deg))*(el)), 12+shootDelay, light);
-		}*/
-		
-		//screen.draw(""+health, screen.width-2-12*(""+health).length(), 2, colors.light, 2);
 	}
 
 }

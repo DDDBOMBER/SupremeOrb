@@ -172,7 +172,7 @@ public class Bitmap {
 				int pix = xx + yy * width;
 				int xd = xx - x;
 				int dist = xd * xd + yd;
-				if (dist >= (r/3)*(r/3) && dist <= rr) {
+				if (dist >= (r/8)*(r/8) && dist <= rr) {
 					int br = 10 - dist * 10 / (rr);
 					pixels[pix] = merge(col, pixels[pix], br);
 				}
