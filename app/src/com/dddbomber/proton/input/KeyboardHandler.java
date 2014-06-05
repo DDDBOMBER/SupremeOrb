@@ -3,7 +3,12 @@ package com.dddbomber.proton.input;
 import java.awt.Canvas;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
+
+import com.dddbomber.proton.Game;
 import com.dddbomber.proton.menu.Menu;
 
 public class KeyboardHandler implements KeyListener	{
@@ -29,8 +34,8 @@ public class KeyboardHandler implements KeyListener	{
 	}
 
 	@Override
-	public void keyTyped(KeyEvent arg0) {
-		Menu.menu.keyTyped(arg0);
+	public void keyTyped(KeyEvent event) {
+		Menu.menu.keyTyped(event);
 	}
 
 }

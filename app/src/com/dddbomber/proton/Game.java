@@ -93,7 +93,7 @@ public class Game extends Canvas implements Runnable{
 				time -= 1;
 				render = true;
 			}
-			if(render){
+			if(render && allowRendering){
 				render();
 			}else{
 				try {
@@ -134,6 +134,7 @@ public class Game extends Canvas implements Runnable{
 			g.drawString(Debugger.debug2, 2, 22);
 			g.drawString(Debugger.debug3, 2, 34);
 			g.drawString(Debugger.debug4, 2, 46);
+			g.drawString(Debugger.debug5, 2, 58);
 		}
 		
 		g.dispose();
@@ -163,10 +164,11 @@ public class Game extends Canvas implements Runnable{
 
 	public static JFrame frame;
 	
+	public static final Game game = new Game();
+	
 	public static void main(String[] args){
 		
 		Asset.loadAssets();
-		Game game = new Game();
 		frame = new JFrame(NAME);
 		try{
 			icon = ImageIO.read(Game.class.getResourceAsStream("/icon.png"));
@@ -200,5 +202,15 @@ public class Game extends Canvas implements Runnable{
 
 	public void stop() {
 		running = false;
+	}
+
+	public static boolean allowRendering = true;
+	
+	public static void disableRendering() {
+		allowRendering = false;
+	}
+
+	public static void enableRendering() {
+		allowRendering = true;
 	}
 }

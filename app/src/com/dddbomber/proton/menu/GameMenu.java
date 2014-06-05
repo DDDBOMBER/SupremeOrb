@@ -8,6 +8,7 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
+import com.dddbomber.proton.Game;
 import com.dddbomber.proton.entity.Colors;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;
@@ -36,8 +37,10 @@ public class GameMenu extends ScreenMenu {
 	public void keyTyped(KeyEvent event) {
 		if(event.getKeyChar() == KeyEvent.VK_CLOSE_BRACKET){
 			try {
+				Game.disableRendering();
 				ImageIO.write(screen.getImage(), "PNG", new File("C:////Screenshots//"+System.currentTimeMillis()+".png"));
 				System.out.println("Saved Image - C:////Screenshots//"+System.currentTimeMillis()+".png");
+				Game.enableRendering();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
