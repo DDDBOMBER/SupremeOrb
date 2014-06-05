@@ -14,7 +14,7 @@ public class Bitmap {
 	}
 	
 	public static String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-			+ "abcdefghijklmnopqrstuvwxyz" + "0123456789*/$";
+			+ "abcdefghijklmnopqrstuvwxyz" + "0123456789*.,-_/$";
 
 	public static Bitmap font = AssetLoader.loadBitmap("/font.png");
 

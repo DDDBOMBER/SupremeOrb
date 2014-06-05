@@ -1,6 +1,7 @@
 package com.dddbomber.proton.menu;
 
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 import java.util.Random;
 
 import com.dddbomber.proton.assets.Asset;
@@ -23,6 +24,12 @@ public class RankMenu extends ScreenMenu {
 		}
 		
 		super.render(g, width, height);
+	}
+
+	@Override
+	public void keyTyped(KeyEvent event) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

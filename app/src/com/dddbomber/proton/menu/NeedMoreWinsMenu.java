@@ -1,6 +1,7 @@
 package com.dddbomber.proton.menu;
 
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 import java.util.Random;
 
 import com.dddbomber.proton.assets.Asset;
@@ -46,6 +47,12 @@ public class NeedMoreWinsMenu extends ScreenMenu {
 		screen.draw(msg, screen.width/2-msg.length()*6, 272, 0xffffff, 2);
 		
 		super.render(g, width, height);
+	}
+
+	@Override
+	public void keyTyped(KeyEvent event) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

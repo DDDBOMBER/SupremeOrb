@@ -1,6 +1,7 @@
 package com.dddbomber.proton.menu;
 
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 import java.util.Random;
 
 import com.dddbomber.proton.entity.Colors;
@@ -25,6 +26,12 @@ public class GameMenu extends ScreenMenu {
 	public void render(Graphics g, int width, int height) {
 		level.render(screen);
 		super.render(g, width, height);
+	}
+
+	@Override
+	public void keyTyped(KeyEvent event) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

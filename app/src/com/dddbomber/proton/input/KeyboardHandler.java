@@ -4,6 +4,8 @@ import java.awt.Canvas;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import com.dddbomber.proton.menu.Menu;
+
 public class KeyboardHandler implements KeyListener	{
 
 	public KeyboardHandler(Canvas c){
@@ -28,7 +30,7 @@ public class KeyboardHandler implements KeyListener	{
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
-		
+		Menu.menu.keyTyped(arg0);
 	}
 
 }

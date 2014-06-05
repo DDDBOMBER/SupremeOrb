@@ -74,4 +74,10 @@ public class GainInEloMenu extends ScreenMenu {
 		super.render(g, width, height);
 	}
 
+	@Override
+	public void keyTyped(KeyEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

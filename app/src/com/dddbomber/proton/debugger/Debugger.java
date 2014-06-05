@@ -1,7 +1,7 @@
 package com.dddbomber.proton.debugger;
 
 public class Debugger {
-	public static boolean debuggerEnabled = true;
+	public static boolean debuggerEnabled = false;
 
 	public static String debug1 = "";
 	public static String debug2 = "";
