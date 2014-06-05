@@ -3,7 +3,7 @@ SupremeOrb
 ==========
 A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both players take the role of a ball of light, who can shoot bullets of the same color as themselves. With added visual effects such as particles and flashes, and gameplay mechanics such as when a player gets hit, everything slows down.
 
-[![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot_02.png)](https://github.com/DDDBOMBER/SupremeOrb)
+[![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot_09.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```
 	A screenshot from a game agaisnt a CPU
 	The player on the right is the CPU, the other player has a rank, but this game will not affect it
@@ -17,15 +17,15 @@ A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both player
 	A screenshot of all the ranks, top left is the lowest, bottom right is the highest
 ```
   The game shows instant feedback after everygame of how the game has affected your ranking and ELO.
- [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_09.png)](https://github.com/DDDBOMBER/SupremeOrb)
+ [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_01.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```
 	A screenshot of someone winning a game and gaining ELO
 ```
- [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_10.png)](https://github.com/DDDBOMBER/SupremeOrb)
+ [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_02.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```
 	A screenshot of someone losing a game and losing ELO
 ```
- [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_11.png)](https://github.com/DDDBOMBER/SupremeOrb)
+ [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_03.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```
 	A screenshot of someone who has not yet got a rank
 ```
