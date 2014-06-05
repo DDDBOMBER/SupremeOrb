@@ -79,7 +79,7 @@ public class AssetLoader {
 	public static Bitmap[] loadBitmapGroup(String string) {
 		File folder;
 		try {
-			folder = new File(AssetLoader.class.getResource(string).getRef());
+			folder = new File(AssetLoader.class.getResource(string).getPath());
 			File[] listOfFiles = folder.listFiles();
 			
 			Bitmap[] b = new Bitmap[listOfFiles.length];
