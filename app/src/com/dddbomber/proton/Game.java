@@ -52,7 +52,7 @@ public class Game extends Canvas implements Runnable{
 			TinySound.init();
 			hit = TinySound.loadSound("/sound/hit.wav");
 			ts = TinySound.loadMusic("/sound/Quadratic.wav");
-			//ts.play(true);
+			ts.play(true);
 			//setVolume(0.15);
 		} catch (Exception e) {
 			e.printStackTrace();

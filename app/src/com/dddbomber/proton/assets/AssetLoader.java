@@ -79,7 +79,7 @@ public class AssetLoader {
 	public static Bitmap[] loadBitmapGroup(String string) {
 		File folder;
 		try {
-			folder = new File(AssetLoader.class.getResource(string).toURI());
+			folder = new File(AssetLoader.class.getResource(string).getRef());
 			File[] listOfFiles = folder.listFiles();
 			
 			Bitmap[] b = new Bitmap[listOfFiles.length];
@@ -87,7 +87,7 @@ public class AssetLoader {
 				b[i] = AssetLoader.loadBitmap(string+"/"+listOfFiles[i].getName());
 			}
 			return b;
-		} catch (URISyntaxException e) {
+		} catch (Exception e) {
 			
 		}
 		return null;
