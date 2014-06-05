@@ -17,15 +17,15 @@ A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both player
 	A screenshot of all the ranks, top left is the lowest, bottom right is the highest
 ```
   The game shows instant feedback after everygame of how the game has affected your ranking and ELO.
- [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_01.png)](https://github.com/DDDBOMBER/SupremeOrb)
+ [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_09.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```
 	A screenshot of someone winning a game and gaining ELO
 ```
- [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_02.png)](https://github.com/DDDBOMBER/SupremeOrb)
+ [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_10.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```
 	A screenshot of someone losing a game and losing ELO
 ```
- [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_03.png)](https://github.com/DDDBOMBER/SupremeOrb)
+ [![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/ranking_menu_11.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```
 	A screenshot of someone who has not yet got a rank
 ```
