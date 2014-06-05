@@ -27,7 +27,7 @@ public class GameModeMenu extends ScreenMenu {
 			if(ip.equals("")){
 				Menu.menu = new ColorSelectMenu();
 			}else{
-				// connect to ip
+				// connect to ipsdsdsdsdsdsdsdsdsd
 			}
 		}
 	}

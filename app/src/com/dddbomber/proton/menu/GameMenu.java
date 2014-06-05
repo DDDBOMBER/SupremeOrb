@@ -2,7 +2,11 @@ package com.dddbomber.proton.menu;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
+
+import javax.imageio.ImageIO;
 
 import com.dddbomber.proton.entity.Colors;
 import com.dddbomber.proton.input.InputHandler;
@@ -30,8 +34,14 @@ public class GameMenu extends ScreenMenu {
 
 	@Override
 	public void keyTyped(KeyEvent event) {
-		// TODO Auto-generated method stub
-		
+		if(event.getKeyChar() == KeyEvent.VK_CLOSE_BRACKET){
+			try {
+				ImageIO.write(screen.getImage(), "PNG", new File("C:////Screenshots//"+System.currentTimeMillis()+".png"));
+				System.out.println("Saved Image - C:////Screenshots//"+System.currentTimeMillis()+".png");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 }
