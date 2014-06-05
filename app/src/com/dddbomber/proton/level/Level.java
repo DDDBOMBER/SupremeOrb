@@ -49,6 +49,10 @@ public class Level {
 	
 	public void render(Screen screen){
 		if(countdown < 61 && countdown > 0){
+			if(countdown == 1){
+				screen.fill(0, 0, screen.width, screen.height, enemy.col, 75);
+				screen.fill(0, 0, screen.width, screen.height, player.col, 75);
+			}
 			screen.draw("Go", screen.width/2-8, 64, 0xffffff, 2);
 		}else if(countdown >= 60){
 			screen.draw(""+(countdown)/60, screen.width/2-6, 96, 0xffffff, 2);
@@ -71,7 +75,7 @@ public class Level {
 				int o1 = 0x2E2128;
 				int o2 = screen.merge(o1, player.col, 80);
 				int o3 = screen.merge(o2, enemy.col, 80);
-				int o4 = screen.merge(o2, 0, 85);
+				int o4 = screen.merge(o3, 0, 85);
 				back = o4;
 			}
 			screen.fill(0, 0, screen.width, screen.height, back, 20);
