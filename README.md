@@ -3,7 +3,7 @@ SupremeOrb
 ==========
 A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both players take the role of a ball of light, who can shoot bullets of the same color as themselves. With added visual effects such as particles and flashes, and gameplay mechanics such as when a player gets hit, everything slows down.
 
-[![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot_09.png)](https://github.com/DDDBOMBER/SupremeOrb)
+[![Hello](https://raw.githubusercontent.com/DDDBOMBER/SupremeOrb/master/press/screenshot_11.png)](https://github.com/DDDBOMBER/SupremeOrb)
 ```
 	A screenshot from a game agaisnt a CPU
 	The player on the right is the CPU, the other player has a rank, but this game will not affect it
