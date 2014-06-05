@@ -38,6 +38,9 @@ public class GameModeMenu extends ScreenMenu {
 		String msg = (ip.equals("") ? "Press Enter To Play Bots" : "Press Enter To Try And Connect");
 		screen.draw(msg, screen.width/2-msg.length()*6, 32, 0xffffff, 2);
 		
+		msg = "Type An Address To Play Online";
+		screen.draw(msg, screen.width/2-msg.length()*6, 64, 0xffffff, 2);
+		
 		screen.fill(screen.width/2-200, 128, 400, 24, 0, 25);
 		screen.draw(ip+(ticks%40>20 ? "_" : ""),  screen.width/2-196, 132, 0xffffff, 2);
 		
