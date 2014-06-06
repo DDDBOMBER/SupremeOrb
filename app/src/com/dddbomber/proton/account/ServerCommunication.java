@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class ServerCommunication {
 	
+	public static String webAddress = "192.168.1.92";
+	
 	public static long lastAuthentication = 0;
 	
 	public static String[] requestPage(String url, String body) throws Exception{
