@@ -1,6 +1,6 @@
 <?php 
 	
-	require_once "/lib/meekrodb.2.2.class.php";
+	require_once "../lib/meekrodb.2.2.class.php";
 
 	$username = $_POST["username"];
 	$password = $_POST["password"];
@@ -22,8 +22,8 @@
 		$chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`~!@#$%^&*()-=_+';
 		$l = strlen($chars) - 1;
 		$str = '';
-		for ($i = 0; $i &lt; $len; ++$i) {
-			$str .= $chars[rand(0, $l];
+		for ($i = 0; $i < $len; $i++) {
+			$str .= $chars[rand(0, $l)];
 	 	}
 		return $str;
 	}
