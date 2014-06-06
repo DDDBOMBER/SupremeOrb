@@ -10,12 +10,18 @@
 		$hashPassword = hashPassword($password, $salt);
 		$userKey = randomSalt(64);
 
-		DB::insert("UserLogon", array(
-			"UserName" => $username,
-			"UserSalt" => $salt,
-			"UserPassword" => $hashPassword,
-			"UserKey" => $userKey
-		));
+		$results = DB::query("SELECT * FROM UserLogon WHERE UserName=%s0", $username);
+		if(count($results) > 0){
+			echo "Failed";
+		}else{
+			DB::insert("UserLogon", array(
+				"UserName" => $username,
+				"UserSalt" => $salt,
+				"UserPassword" => $hashPassword,
+				"UserKey" => $userKey
+			));
+			echo "Created";
+		}
 	}
 
 	function randomSalt($len = 8) {
