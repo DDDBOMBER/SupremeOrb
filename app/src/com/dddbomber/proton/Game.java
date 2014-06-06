@@ -105,7 +105,7 @@ public class Game extends Canvas implements Runnable{
 				lastSecond += 1000;
 				fps = renders;
 				ticks = renders = 0;
-				System.out.println("FPS - "+fps);
+				Debugger.debug5 = "FPS - "+fps;
 			}
 		}
 	}
@@ -154,9 +154,8 @@ public class Game extends Canvas implements Runnable{
 		}
 		Debugger.debug1 = "GLOBAL - Packets Recieved - "+sc.packetManager.getPacketsRecieved() +" , Packets Sent - "+sc.packetManager.getPacketsSent();
 		Debugger.debug2 = "STORAGE - Packets Recieved - "+sc.packetManager.recievedPackets.size() +" , Packets Sent - "+sc.packetManager.sentPackets.size();
-		if(sc != null)Debugger.debug3 = "P2P - Connection Open on port '"+sc.port+"', to address '"+sc.ip+"'";
+		if(sc != null)Debugger.debug3 = "P2P - Connection Open on port '"+sc.port+"', to address '"+sc.ip+"'"+" LOGIN SERVER - "+ServerCommunication.webAddress;
 		Debugger.debug4 = "ACCOUNT - "+account.username +"("+account.userID+") - ELO "+account.elo + " - "+(ServerCommunication.lastAuthentication == 0 ? "NEVER AUTHORIZED" : "Authorized "+(System.currentTimeMillis()/1000-ServerCommunication.lastAuthentication)+"s ago");
-		Debugger.debug5 = "SERVER - "+ServerCommunication.webAddress;
 	}
 
 	public static Image icon;
