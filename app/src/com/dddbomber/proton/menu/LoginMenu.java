@@ -19,8 +19,13 @@ public class LoginMenu extends ScreenMenu {
 	public boolean selected = true;
 	
 	public String username = "", password = "";
+	public boolean login, register;
+	public Rectangle loginR, registerR;
+	public Point mouse = new Point(0,0);
 	
 	public int ticks = 0;
+	
+	public boolean mouseClick = false;
 	
 	public void tick(InputHandler input) {
 		ticks++;
@@ -30,14 +35,43 @@ public class LoginMenu extends ScreenMenu {
 			}
 			if(!password.equals("")){
 				if(!selected){
-					if(ServerCommunication.login(Game.account, username, password)){
-						Menu.menu = new GameModeMenu();
-					}else{
-						selected = true;
-						password = "";
+				}
+			}
+		}
+		mouse = new Point(input.mouse.x, input.mouse.y);
+		if(input.mouse.left){
+			mouseClick = true;
+		}else{
+			if(mouseClick){
+				mouseClick = false;
+				if(!username.equals("") && !password.equals("")){
+					if(login){
+						login();
+					}
+					if(register){
+						register();
 					}
 				}
 			}
+		}
+		login = register = false;
+	}
+	
+	public void login(){
+		if(ServerCommunication.login(Game.account, username, password)){
+			Menu.menu = new GameModeMenu();
+		}else{
+			selected = true;
+			password = "";
+		}
+	}
+	
+	public void register(){
+		if(ServerCommunication.register(Game.account, username, password)){
+			Menu.menu = new GameModeMenu();
+		}else{
+			selected = true;
+			password = username = "";
 		}
 	}
 	
@@ -60,6 +94,20 @@ public class LoginMenu extends ScreenMenu {
 		
 		screen.fill(screen.width/2-200, 156, 400, 24, 0, 25);
 		screen.draw(s+(!selected && ticks%40>20 ? "_" : ""),  screen.width/2-s.length()*6, 160, 0xffffff, 2);
+
+		loginR = new Rectangle(screen.width/2-100, 196, 200, 24);
+		login = loginR.contains(mouse);
+		msg = "Login";
+		screen.fill(screen.width/2-100, 196, 200, 24, (login ? 0x53353A : 0x866759), 25);
+		screen.fill(screen.width/2-100, 220, 200, 4, 0x53353A, 15);
+		screen.draw(msg,  screen.width/2-msg.length()*6, 200, 0xffffff, 2);
+		
+		registerR = new Rectangle(screen.width/2-100, 238, 200, 24);
+		register = registerR.contains(mouse);
+		msg = "Register";
+		screen.fill(screen.width/2-100, 238, 200, 24, (register ? 0x53353A : 0x866759), 25);
+		screen.fill(screen.width/2-100, 262, 200, 4, 0x53353A, 15);
+		screen.draw(msg,  screen.width/2-msg.length()*6, 242, 0xffffff, 2);
 		
 		super.render(g, width, height);
 	}

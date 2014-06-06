@@ -28,6 +28,18 @@ public class ServerCommunication {
 		return false;
 	}
 	
+	public static boolean register(Account account, String username, String password){
+		try {
+			String[] s = requestPage("http://"+webAddress+"/user/create_user.php", "username="+username+"&password="+password);
+			if(!s[0].equals("Failed")){
+				return login(account, username, password);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
 	public static String[] requestPage(String url, String body) throws Exception{
 		URL req = new URL(url);
 		HttpURLConnection connection = (HttpURLConnection) req.openConnection();
