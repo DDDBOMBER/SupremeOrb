@@ -44,7 +44,7 @@ public class Game extends Canvas implements Runnable{
 	public static Music ts;
 	public static Sound hit;
 	
-	public static Account account = new Account(17, "65U7T5K0Q");
+	public static Account account = new Account();
 	
 	public Game(){
 		try {
@@ -166,7 +166,7 @@ public class Game extends Canvas implements Runnable{
 	public static final Game game = new Game();
 	
 	public static void main(String[] args){
-		ServerCommunication.login(account, "Cheezy", "disturbed1");
+		//ServerCommunication.login(account, "Cheezy", "disturbed1");
 		Asset.loadAssets();
 		frame = new JFrame(NAME);
 		try{

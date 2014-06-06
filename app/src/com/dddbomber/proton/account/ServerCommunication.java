@@ -12,7 +12,7 @@ public class ServerCommunication {
 	
 	public static long lastAuthentication = 0;
 	
-	public static void login(Account account, String username, String password){
+	public static boolean login(Account account, String username, String password){
 		try {
 			String[] s = requestPage("http://"+webAddress+"/user/confirm_login.php", "username="+username+"&password="+password);
 			if(!s[0].equals("Failed")){
@@ -20,10 +20,12 @@ public class ServerCommunication {
 				account.username = s[1];
 				account.private_key = s[2];
 				lastAuthentication = System.currentTimeMillis()/1000;
+				return true;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return false;
 	}
 	
 	public static String[] requestPage(String url, String body) throws Exception{

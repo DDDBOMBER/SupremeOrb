@@ -17,6 +17,8 @@
 			echo $row["UserId"]."\n";
 			echo $row["UserName"]."\n";
 			echo $row["UserKey"];
+		}else{
+			echo "Failed";
 		}
 	}
 

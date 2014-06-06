@@ -9,7 +9,7 @@ public abstract class Menu {
 	
 	public static int SCREENWIDTH = 480, SCREENHEIGHT = 320;
 	
-	public static Menu menu = new GameModeMenu();
+	public static Menu menu = new LoginMenu();
 	
 	public abstract void tick(InputHandler input);
 	
