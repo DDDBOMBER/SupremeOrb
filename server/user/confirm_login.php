@@ -6,8 +6,7 @@
 	$password = $_POST["password"];
 
 	$results = DB::query("SELECT * FROM UserLogon WHERE UserName=%s0", $username);
-	$results = DB::query("SELECT * FROM UserLogon WHERE UserName=%s0", $username);
-		if(count($results) > 0){
+		if(count($results) == 0){
 			echo "Failed";
 		}else{
 			foreach ($results as $row) {
