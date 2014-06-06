@@ -12,6 +12,20 @@ public class ServerCommunication {
 	
 	public static long lastAuthentication = 0;
 	
+	public static void login(Account account, String username, String password){
+		try {
+			String[] s = requestPage("http://"+webAddress+"/user/confirm_login.php", "username="+username+"&password="+password);
+			if(!s[0].equals("Failed")){
+				account.userID = Integer.parseInt(s[0]);
+				account.username = s[1];
+				account.private_key = s[2];
+				lastAuthentication = System.currentTimeMillis()/1000;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static String[] requestPage(String url, String body) throws Exception{
 		URL req = new URL(url);
 		HttpURLConnection connection = (HttpURLConnection) req.openConnection();
@@ -41,6 +55,7 @@ public class ServerCommunication {
         String[] s = new String[lines.size()];
         for(int i = 0; i < lines.size(); i++){
         	s[i] = lines.get(i);
+        	System.out.println(s[i]);
         }
         
         return s;

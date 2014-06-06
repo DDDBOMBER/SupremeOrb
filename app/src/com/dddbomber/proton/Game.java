@@ -47,7 +47,6 @@ public class Game extends Canvas implements Runnable{
 	public static Account account = new Account(17, "65U7T5K0Q");
 	
 	public Game(){
-		account.getUserInfo();
 		try {
 			TinySound.init();
 			hit = TinySound.loadSound("/sound/hit.wav");
@@ -156,8 +155,8 @@ public class Game extends Canvas implements Runnable{
 		Debugger.debug1 = "GLOBAL - Packets Recieved - "+sc.packetManager.getPacketsRecieved() +" , Packets Sent - "+sc.packetManager.getPacketsSent();
 		Debugger.debug2 = "STORAGE - Packets Recieved - "+sc.packetManager.recievedPackets.size() +" , Packets Sent - "+sc.packetManager.sentPackets.size();
 		if(sc != null)Debugger.debug3 = "P2P - Connection Open on port '"+sc.port+"', to address '"+sc.ip+"'";
-		Debugger.debug4 = "ACCOUNT - "+account.username +"("+account.userID+") - ELO "+account.elo + " - "+(ServerCommunication.lastAuthentication == 0 ? "NEVER AUTHORIZED" : "Authorized "+(System.currentTimeMillis()-ServerCommunication.lastAuthentication)+"ms ago");
-		Debugger.debug5 = "SERVER - ";
+		Debugger.debug4 = "ACCOUNT - "+account.username +"("+account.userID+") - ELO "+account.elo + " - "+(ServerCommunication.lastAuthentication == 0 ? "NEVER AUTHORIZED" : "Authorized "+(System.currentTimeMillis()/1000-ServerCommunication.lastAuthentication)+"s ago");
+		Debugger.debug5 = "SERVER - "+ServerCommunication.webAddress;
 	}
 
 	public static Image icon;
@@ -167,7 +166,7 @@ public class Game extends Canvas implements Runnable{
 	public static final Game game = new Game();
 	
 	public static void main(String[] args){
-		
+		ServerCommunication.login(account, "Cheezy", "disturbed1");
 		Asset.loadAssets();
 		frame = new JFrame(NAME);
 		try{
