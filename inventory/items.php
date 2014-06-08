@@ -43,6 +43,4 @@
 
 		return $a;
 	}
-
-	var_dump(get_color_list());
  ?>
