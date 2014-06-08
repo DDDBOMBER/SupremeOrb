@@ -1,11 +1,11 @@
 package com.dddbomber.proton.entity;
 
 public class ColorInstance {
-	public int col, light;
+	public int col, col_light;
 	
 	public ColorInstance(int col, int light){
 		this.col = col;
-		this.light = light;
+		this.col_light = light;
 	}
 	
 	public ColorInstance(int col){

@@ -26,6 +26,7 @@ import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.cpu.NameGenerator;
 import com.dddbomber.proton.debugger.Debugger;
 import com.dddbomber.proton.input.InputHandler;
+import com.dddbomber.proton.inventory.Inventory;
 import com.dddbomber.proton.menu.Menu;
 import com.dddbomber.proton.mp.GameConnection;
 import com.dddbomber.proton.mp.StandardConnection;

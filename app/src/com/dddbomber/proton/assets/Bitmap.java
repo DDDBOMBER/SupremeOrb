@@ -526,7 +526,7 @@ public class Bitmap {
 		
 	}
 	
-	public int merge(int color, int color2, int amount) {
+	public static int merge(int color, int color2, int amount) {
 
 		if(amount > 100)amount = 100;
 		if(amount < 0)amount = 0;

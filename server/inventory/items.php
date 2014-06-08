@@ -4,8 +4,8 @@
 		public $col, $col_light;
 
 		function __construct($col, $col_light){
-			$this->col = hexdec($col);
-			$this->col_light = hexdec($col_light);
+			$this->col = $col;
+			$this->col_light = $col_light;
 		}
 	}
 

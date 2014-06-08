@@ -6,6 +6,7 @@ import java.util.Random;
 
 import com.dddbomber.proton.Game;
 import com.dddbomber.proton.assets.Asset;
+import com.dddbomber.proton.assets.Bitmap;
 import com.dddbomber.proton.assets.Screen;
 import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.entity.Enemy;
@@ -73,9 +74,9 @@ public class Level {
 		}else{
 			if(back == -1){
 				int o1 = 0x2E2128;
-				int o2 = screen.merge(o1, player.col, 80);
-				int o3 = screen.merge(o2, enemy.col, 80);
-				int o4 = screen.merge(o3, 0, 85);
+				int o2 = Bitmap.merge(o1, player.col, 80);
+				int o3 = Bitmap.merge(o2, enemy.col, 80);
+				int o4 = Bitmap.merge(o3, 0, 85);
 				back = o4;
 			}
 			screen.fill(0, 0, screen.width, screen.height, back, 20);

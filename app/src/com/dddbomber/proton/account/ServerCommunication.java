@@ -69,9 +69,20 @@ public class ServerCommunication {
         String[] s = new String[lines.size()];
         for(int i = 0; i < lines.size(); i++){
         	s[i] = lines.get(i);
-        	System.out.println(s[i]);
+        	//System.out.println(s[i]);
         }
         
         return s;
+	}
+
+	public static String getItems(Account account) {
+		String[] s;
+		try {
+			s = requestPage("http://"+webAddress+"/inventory/get_player_inventory.php?id="+account.userID, "");
+			return s[0];
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "Failed";
 	}
 }
