@@ -3,7 +3,7 @@ package com.dddbomber.proton.entity;
 import java.util.ArrayList;
 import java.util.Random;
 
-public enum Colors {
+public enum PredefinedColors {
 	red(0x8B0800, 0xC04424),
 	green(0x4D712B, 0xB6B929),
 	blue(0x2E70D1, 0x6DC2CA),
@@ -42,26 +42,26 @@ public enum Colors {
 	
 	public int col, light;
 	
-	Colors(int col, int light){
+	PredefinedColors(int col, int light){
 		this.col = col;
 		this.light = light;
 	}
 	
 	static Random random = new Random();
 	
-	public static Colors getRandomCol(){
+	public static PredefinedColors getRandomCol(){
 		int i = random.nextInt(unused.size());
-		Colors c = unused.get(i);
+		PredefinedColors c = unused.get(i);
 		unused.remove(i);
 		return c;
 	}
 	
-	public static ArrayList<Colors> unused = cols();
+	public static ArrayList<PredefinedColors> unused = cols();
 	
-	public static ArrayList<Colors> cols;
+	public static ArrayList<PredefinedColors> cols;
 	
-	public static ArrayList<Colors> cols(){
-		ArrayList<Colors> list = new ArrayList<Colors>();
+	public static ArrayList<PredefinedColors> cols(){
+		ArrayList<PredefinedColors> list = new ArrayList<PredefinedColors>();
 		
 		list.add(purple);
 		list.add(gray);
@@ -93,17 +93,11 @@ public enum Colors {
 		list.add(ocean);
 		list.add(pink);
 
-		//if(cols == null){
-			cols = new ArrayList<Colors>();
+		if(cols == null){
+			cols = new ArrayList<PredefinedColors>();
 			cols.addAll(list);
-		//}
+		}
 		
 		return list;
-	}
-	
-	public static void printColors(){
-		for(Colors c : cols()){
-			System.out.println("new Color(\""+c.col+"\", \""+c.light+"\"),");
-		}
 	}
 }

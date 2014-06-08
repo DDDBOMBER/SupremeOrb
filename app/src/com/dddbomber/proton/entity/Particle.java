@@ -9,7 +9,7 @@ public class Particle extends Entity {
 	
 	public boolean moving;
 	
-	public Particle(Colors colors, double x, double y, double rotation, int size, boolean moving){
+	public Particle(PredefinedColors colors, double x, double y, double rotation, int size, boolean moving){
 		this.x = x;
 		this.y = y;
 		xSize = 16;
@@ -25,11 +25,11 @@ public class Particle extends Entity {
 		this.moving = moving;
 	}
 	
-	public Particle(Colors colors, double x, double y, int rotation, int size) {
+	public Particle(PredefinedColors colors, double x, double y, int rotation, int size) {
 		this(colors, x, y, rotation, size, true);
 	}
 
-	public Colors colors;
+	public PredefinedColors colors;
 	public int sizeDelay;
 	
 	@Override

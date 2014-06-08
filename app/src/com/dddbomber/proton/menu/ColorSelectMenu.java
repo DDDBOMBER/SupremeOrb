@@ -6,22 +6,22 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.util.Random;
 
-import com.dddbomber.proton.entity.Colors;
+import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.input.InputHandler;
 
 public class ColorSelectMenu extends ScreenMenu {
 
 	static Random random = new Random();
 	
-	public Colors selected;
-	public Colors hovered;
+	public PredefinedColors selected;
+	public PredefinedColors hovered;
 	
 	public void tick(InputHandler input) {
 		int x = 48;
 		int id = 0;
 		int y = 0;
 		hovered = null;
-		for(Colors c : Colors.cols()){
+		for(PredefinedColors c : PredefinedColors.cols()){
 			id++;
 			if(id > 9){
 				y += 48;
@@ -44,7 +44,7 @@ public class ColorSelectMenu extends ScreenMenu {
 		int id = 0;
 		int y = 0;
 		int x = 48;
-		for(Colors c : Colors.cols()){
+		for(PredefinedColors c : PredefinedColors.cols()){
 			id++;
 			if(id > 9){
 				y += 48;

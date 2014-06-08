@@ -17,8 +17,8 @@ public abstract class Entity {
 	public boolean removed;
 	
 	public int hurtTime;
-	public Colors hurtColor;
-	public Colors colors;
+	public PredefinedColors hurtColor;
+	public PredefinedColors colors;
 	
 	protected Random random = new Random();
 	

@@ -14,7 +14,7 @@ public class Player extends NamedEntity {
 	
 	public int col, light;
 	
-	public Player(Colors color, int x, int y){
+	public Player(PredefinedColors color, int x, int y){
 		colors = color;
 		size = 10;
 		this.x = x;

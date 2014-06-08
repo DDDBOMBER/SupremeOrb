@@ -5,7 +5,7 @@ import org.net.p2p.*;
 
 import com.dddbomber.proton.Game;
 import com.dddbomber.proton.cpu.NameGenerator;
-import com.dddbomber.proton.entity.Colors;
+import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.menu.Menu;
 
 public class GameConnection extends StandardConnection{

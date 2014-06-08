@@ -7,7 +7,7 @@ import java.util.Random;
 import com.dddbomber.proton.Game;
 import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.assets.Screen;
-import com.dddbomber.proton.entity.Colors;
+import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.entity.Enemy;
 import com.dddbomber.proton.entity.Entity;
 import com.dddbomber.proton.entity.EntitySpawner;
@@ -20,9 +20,9 @@ import com.dddbomber.proton.menu.Menu;
 
 public class MPLevel extends Level{
 	public final int opponentRank;
-	public final Colors opponentColors;
+	public final PredefinedColors opponentColors;
 	
-	public MPLevel(Colors color, Colors opponentColors, int opponentRank){
+	public MPLevel(PredefinedColors color, PredefinedColors opponentColors, int opponentRank){
 		super(color);
 		this.opponentColors = opponentColors;
 		this.opponentRank = opponentRank;

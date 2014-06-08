@@ -7,15 +7,15 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 
 import com.dddbomber.proton.assets.Bitmap;
-import com.dddbomber.proton.entity.Colors;
+import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.input.InputHandler;
 
 public class GameModeMenu extends ScreenMenu {
 
 	static Random random = new Random();
 	
-	public Colors selected;                                  
-	public Colors hovered;
+	public PredefinedColors selected;                                  
+	public PredefinedColors hovered;
 	
 	public String ip = "";
 	

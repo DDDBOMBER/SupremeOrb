@@ -7,7 +7,7 @@ import java.util.Random;
 import com.dddbomber.proton.Game;
 import com.dddbomber.proton.assets.Asset;
 import com.dddbomber.proton.assets.Screen;
-import com.dddbomber.proton.entity.Colors;
+import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.entity.Enemy;
 import com.dddbomber.proton.entity.Entity;
 import com.dddbomber.proton.entity.EntitySpawner;
@@ -35,7 +35,7 @@ public class Level {
 	
 	public int countdown = 220;
 	
-	public Level(Colors color){
+	public Level(PredefinedColors color){
 		player = new Player(color, 80, 160);
 		entities.add(new EntitySpawner(player));
 		entities.add(new EntitySpawner(enemy=new Enemy(400, 160)));

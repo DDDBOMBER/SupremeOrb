@@ -16,7 +16,7 @@ public class Enemy extends NamedEntity {
 		this.x = x;
 		this.y = y;
 		size = 10;
-		colors = Colors.getRandomCol();
+		colors = PredefinedColors.getRandomCol();
 		name = "CPU "+NameGenerator.generateName();
 		col = colors.col;
 		light = colors.light;

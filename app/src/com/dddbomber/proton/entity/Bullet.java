@@ -11,7 +11,7 @@ public class Bullet extends Entity {
 	
 	public Entity owner;
 	
-	public Bullet(Colors colors, double x, double y, double rotation, int size, Entity owner){
+	public Bullet(PredefinedColors colors, double x, double y, double rotation, int size, Entity owner){
 		this.x = x;
 		this.y = y;
 		xSize = 16;
@@ -26,7 +26,7 @@ public class Bullet extends Entity {
 		this.owner = owner;
 	}
 	
-	public Colors colors;
+	public PredefinedColors colors;
 	public boolean hit = false;
 	
 	@Override

@@ -3,7 +3,7 @@ package com.dddbomber.proton.mp.packet;
 import java.util.ArrayList;
 
 import com.dddbomber.proton.entity.Bullet;
-import com.dddbomber.proton.entity.Colors;
+import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.menu.*;
 
 public class PacketManager {

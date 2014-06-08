@@ -9,7 +9,7 @@ import java.util.Random;
 import com.dddbomber.proton.Game;
 import com.dddbomber.proton.account.ServerCommunication;
 import com.dddbomber.proton.assets.Bitmap;
-import com.dddbomber.proton.entity.Colors;
+import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.input.InputHandler;
 
 public class LoginMenu extends ScreenMenu {

@@ -12,7 +12,7 @@ public class MPEnemy extends Enemy {
 	
 	public int col, light;
 	
-	public MPEnemy(int x, int y, Colors colors, String name){
+	public MPEnemy(int x, int y, PredefinedColors colors, String name){
 		super(x, y);
 		this.colors = colors;
 		this.name = name;

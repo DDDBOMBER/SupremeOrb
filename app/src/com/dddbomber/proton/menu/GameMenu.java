@@ -9,14 +9,14 @@ import java.util.Random;
 import javax.imageio.ImageIO;
 
 import com.dddbomber.proton.Game;
-import com.dddbomber.proton.entity.Colors;
+import com.dddbomber.proton.entity.PredefinedColors;
 import com.dddbomber.proton.input.InputHandler;
 import com.dddbomber.proton.level.Level;
 
 public class GameMenu extends ScreenMenu {
 
 	
-	public GameMenu(Colors colors){
+	public GameMenu(PredefinedColors colors){
 		level = new Level(colors);
 	}
 	
