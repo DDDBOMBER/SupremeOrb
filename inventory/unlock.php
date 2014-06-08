@@ -1,5 +1,6 @@
 <?php 
 
+	require_once "../lib/meekrodb.2.2.class.php";
 	require_once "items.php";
 
 	function get_item() {
@@ -72,6 +73,12 @@
 			}
 
 		}
+
+		DB::insert("UserItems", array(
+			"UserID" => 1,
+			"Type" => $item->type,
+			"Metadata" => $item->metadata
+		));
 
 		return $item;
 	}
