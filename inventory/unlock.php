@@ -77,7 +77,7 @@
 		DB::insert("UserItems", array(
 			"UserID" => 1,
 			"Type" => $item->type,
-			"Metadata" => $item->metadata
+			"Metadata" => json_encode($item->metadata)
 		));
 
 		return $item;
