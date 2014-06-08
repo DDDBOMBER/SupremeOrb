@@ -25,7 +25,7 @@ public class ColorSelectMenu extends ScreenMenu {
 			id++;
 			if(id > 9){
 				y += 48;
-				id = 0;
+				id = 1;
 				x = 48;
 			}
 			Rectangle cr = new Rectangle(x-24, 104+y, 48, 48);
@@ -48,7 +48,7 @@ public class ColorSelectMenu extends ScreenMenu {
 			id++;
 			if(id > 9){
 				y += 48;
-				id = 0;
+				id = 1;
 				x = 48;
 			}
 			screen.fill(x-24, 104+y, 1, 48, c.col, 10);

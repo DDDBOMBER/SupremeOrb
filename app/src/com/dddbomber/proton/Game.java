@@ -165,7 +165,7 @@ public class Game extends Canvas implements Runnable{
 	public static final Game game = new Game();
 	
 	public static void main(String[] args){
-		//ServerCommunication.login(account, "Cheezy", "disturbed1");
+		ServerCommunication.login(account, "Cheezy", "disturbed1");
 		Asset.loadAssets();
 		frame = new JFrame(NAME);
 		try{
