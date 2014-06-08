@@ -52,7 +52,6 @@ A fast-paced multiplayer game in which you fight 1 on 1 in an arena. Both player
 	For £1.99 a month you gain a premium account
 	Which allows you access to premium tournaments, new character colors and a badge.
 ```
-Customization can be done by playing to earn points or by purchasing a premium account. Each new color will have a level out of 3. The first, and default level simply gives you the color. The second level, earned by winning 50 games with that color gives the bullets particle effects. The third and final level achieved by getting 150 wins with the color gives the player orb particle effects. Special colors called Ethereal colors are exceedingly rare, and modulate between colors during the game. Ethereal colors have levels, like normal colors, but can not be levelled up. The lowest level of ethereal color modulates between 2 colors, and each additional level adds a color to the modulation. Ethereal colors have a maximum level of 5. Ethereal colors can be upgraded to produce particle effects like normal colors.
 
 #License
   Owned By Dylan Dhokia
