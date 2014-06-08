@@ -24,6 +24,14 @@ public class InventoryMenu extends ScreenMenu {
 	public InventoryMenu(){
 		i = new Inventory();
 		i.load();
+	}
+	
+	public int ticks = 1;
+	
+	public void tick(InputHandler input) {
+		ticks++;
+		
+		availableColors.clear();
 		
 		for(Item item : i.items){
 			if(item.Type.equals("Standard")){
@@ -31,21 +39,23 @@ public class InventoryMenu extends ScreenMenu {
 			}else if(item.Type.equals("Ethereal")){
 				EtherealItem ei = (EtherealItem)item;
 				ColorInstance col = new ColorInstance();
-				col.col = Bitmap.merge(ei.colors[0].col, ei.colors[1].col, 50);
-				col.col_light = Bitmap.merge(ei.colors[0].col_light, ei.colors[1].col_light, 50);
+				col.col = Bitmap.merge(ei.colors[0].col, ei.colors[1].col, pulse(ticks/4));
+				col.col_light = Bitmap.merge(ei.colors[0].col_light, ei.colors[1].col_light, pulse(ticks/4));
 				availableColors.add(col);
 			}
 		}
 	}
 	
-	public int ticks = 1;
-	
-	public void tick(InputHandler input) {
-		
+	public int pulse(int ticks){
+		if(ticks%200 >= 100){
+			return 100-ticks%100;
+		}else{
+			return ticks%100;
+		}
 	}
 	
 	public void render(Graphics g, int width, int height) {
-		screen.fill(0, 0, screen.width, screen.height, 0x2E2128, 20);
+		screen.fill(0, 0, screen.width, screen.height, 0x2D2D2D, 20);
 		
 		int id = 0;
 		int y = 0;
@@ -61,7 +71,7 @@ public class InventoryMenu extends ScreenMenu {
 			screen.fill(x-24, 104+y, 48, 1, c.col, 10);
 			screen.fill(x-24, 104+47+y, 48, 1, c.col, 10);
 			screen.fill(x+23, 104+y, 1, 48, c.col, 10);
-			int growth = (int)(Math.random()*5);
+			int growth = (int)(Math.random()*-3);
 			screen.renderFaint(x, 128+y, 32+growth, c.col);
 			screen.renderLight(x, 128+y, 8+growth, c.col);
 			screen.renderLight(x, 128+y, 8+growth, c.col_light);
