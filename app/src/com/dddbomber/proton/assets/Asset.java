@@ -7,6 +7,7 @@ public class Asset {
 	public static Bitmap rank_overlay = loadBitmap("/gui/rank_overlay.png");
 	public static Bitmap color_overlay = loadBitmap("/gui/color_overlay.png");
 	public static Bitmap loading = loadBitmap("/gui/loading.png");
+	public static Bitmap item_back = loadBitmap("/gui/item_back.png");
 	
 	public static Bitmap ranks[] = {
 		loadBitmap("/ranks/rank00.png"),
