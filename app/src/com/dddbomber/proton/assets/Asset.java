@@ -5,6 +5,7 @@ import static com.dddbomber.proton.assets.AssetLoader.*;
 public class Asset {
 	public static Bitmap cursor = loadBitmap("/cursor.png");
 	public static Bitmap rank_overlay = loadBitmap("/gui/rank_overlay.png");
+	public static Bitmap color_overlay = loadBitmap("/gui/color_overlay.png");
 	public static Bitmap loading = loadBitmap("/gui/loading.png");
 	
 	public static Bitmap ranks[] = {
